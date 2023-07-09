@@ -1,0 +1,20 @@
+[*]
+indent_style = space
+
+[*.cs]
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+dotnet_diagnostic.CA1310.severity = error
+dotnet_diagnostic.CA1307.severity = error
+
+# Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+dotnet_diagnostic.NUnit2005.severity = none
+dotnet_diagnostic.NUnit2006.severity = none
+dotnet_diagnostic.NUnit2003.severity = none
+dotnet_diagnostic.NUnit2017.severity = none
+dotnet_diagnostic.NUnit2002.severity = none
+dotnet_diagnostic.NUnit2019.severity = none

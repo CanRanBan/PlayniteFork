@@ -14,8 +14,7 @@ namespace Playnite.Emulators
     public class Emulation : IEmulationAPI
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        private static string platformsFile => Path.Combine(PlaynitePaths.ProgramPath, "Emulation", "Platforms.yaml");
-        private static string regionsFile => Path.Combine(PlaynitePaths.ProgramPath, "Emulation", "Regions.yaml");
+ 
         private static string emulatorDefDir => Path.Combine(PlaynitePaths.ProgramPath, "Emulation", "Emulators");
 
         public const string StartupScriptFileName = "startGame.ps1";
@@ -44,37 +43,6 @@ namespace Playnite.Emulators
 
         #endregion IEmulationAPI
 
-        private static List<EmulatedPlatform> platforms;
-        public static IList<EmulatedPlatform> Platforms
-        {
-            get
-            {
-                if (platforms != null)
-                {
-                    return platforms;
-                }
-
-                if (File.Exists(platformsFile))
-                {
-                    try
-                    {
-                        platforms = Serialization.FromYamlFile<List<EmulatedPlatform>>(platformsFile);
-                    }
-                    catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
-                    {
-                        platforms = new List<EmulatedPlatform>();
-                        logger.Error(e, $"Failed to emulated platforms list.");
-                    }
-                }
-                else
-                {
-                    logger.Error("Emulation platforms file not found!");
-                    platforms = new List<EmulatedPlatform>();
-                }
-
-                return platforms.AsReadOnly();
-            }
-        }
 
         public static EmulatedPlatform GetPlatform(string platformsId)
         {
@@ -84,38 +52,6 @@ namespace Playnite.Emulators
         public static EmulatedPlatform GetPlatformByDatabase(string databaseName)
         {
             return Platforms.FirstOrDefault(a => a.Databases?.ContainsString(databaseName, StringComparison.OrdinalIgnoreCase) == true);
-        }
-
-        private static List<EmulatedRegion> regions;
-        public static IList<EmulatedRegion> Regions
-        {
-            get
-            {
-                if (regions != null)
-                {
-                    return regions;
-                }
-
-                if (File.Exists(regionsFile))
-                {
-                    try
-                    {
-                        regions = Serialization.FromYamlFile<List<EmulatedRegion>>(regionsFile);
-                    }
-                    catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
-                    {
-                        regions = new List<EmulatedRegion>();
-                        logger.Error(e, $"Failed to emulated regions list.");
-                    }
-                }
-                else
-                {
-                    logger.Error("Emulation regions file not found!");
-                    regions = new List<EmulatedRegion>();
-                }
-
-                return regions.AsReadOnly();
-            }
         }
 
         public static EmulatedRegion GetRegion(string regionsId)
