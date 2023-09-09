@@ -1231,7 +1231,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SETX PLAYNITE_SLN $(SolutionDir)</PostBuildEvent>
+    <PostBuildEvent>SETX PLAYNITE_SLN "$(SolutionDir)\"</PostBuildEvent>
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
   <PropertyGroup>
