@@ -14,6 +14,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -708,6 +709,7 @@ namespace Playnite.DesktopApp.ViewModels
                 new GoogleImageDownloadWindowFactory(),
                 resources,
                 searchTerm,
+                appSettings.WebImageSafeSearch,
                 imageWidth,
                 imageHeight);
             if (model.OpenView() == true)
@@ -720,7 +722,13 @@ namespace Playnite.DesktopApp.ViewModels
                         return null;
                     }
 
-                    var response = HttpDownloader.GetResponseCode(url, out var _);
+                    if (model.SafeSearch != appSettings.WebImageSafeSearch)
+                    {
+                        appSettings.WebImageSafeSearch = model.SafeSearch;
+                    }
+
+                    var cancelToken = new CancellationTokenSource(Common.Timer.SecondsToMilliseconds(5));
+                    var response = HttpDownloader.GetResponseCode(url, cancelToken.Token, out var test);
                     if (!response.IsSuccess())
                     {
                         logger.Warn("Original Google image request failed: " + response.ToString());
