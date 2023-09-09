@@ -21,8 +21,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
-#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-
 namespace Playnite.Controllers
 {
     public class EmulationPlayAction : GameAction
@@ -276,12 +274,12 @@ namespace Playnite.Controllers
                 if (trackingMode == TrackingMode.Default || trackingMode == TrackingMode.Process)
                 {
                     gameStarted(process.Id);
-                    procMon.WatchProcessTree(process);
+                    _ = procMon.WatchProcessTree(process);
                 }
                 else if (trackingMode == TrackingMode.OriginalProcess)
                 {
                     gameStarted(process.Id);
-                    procMon.WatchSingleProcess(process);
+                    _ = procMon.WatchSingleProcess(process);
                 }
                 else if (trackingMode == TrackingMode.Directory)
                 {
@@ -289,7 +287,7 @@ namespace Playnite.Controllers
                     if (!watchDir.IsNullOrEmpty() && FileSystem.DirectoryExists(watchDir))
                     {
                         stopWatch = Stopwatch.StartNew();
-                        procMon.WatchDirectoryProcesses(watchDir, false);
+                        _ = procMon.WatchDirectoryProcesses(watchDir, false);
                     }
                     else
                     {
@@ -538,10 +536,10 @@ namespace Playnite.Controllers
                             }
 
                             // TODO switch to WatchUwpApp once we are building as 64bit app
-                            //procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
+                            //_ = procMon.WatchUwpApp(uwpMatch.Groups[1].Value, false);
                             if (FileSystem.DirectoryExists(scanDirectory) && ProcessMonitor.IsWatchableByProcessNames(scanDirectory))
                             {
-                                procMon.WatchDirectoryProcesses(scanDirectory, false, true);
+                                _ = procMon.WatchDirectoryProcesses(scanDirectory, false, true);
                             }
                             else
                             {
@@ -553,7 +551,7 @@ namespace Playnite.Controllers
                             if (proc != null)
                             {
                                 InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = proc.Id });
-                                procMon.WatchProcessTree(proc);
+                                _ = procMon.WatchProcessTree(proc);
                             }
                             else
                             {
@@ -566,7 +564,7 @@ namespace Playnite.Controllers
                         if (!string.IsNullOrEmpty(gameClone.InstallDirectory) && FileSystem.DirectoryExists(gameClone.InstallDirectory))
                         {
                             stopWatch = Stopwatch.StartNew();
-                            procMon.WatchDirectoryProcesses(gameClone.InstallDirectory, false);
+                            _ = procMon.WatchDirectoryProcesses(gameClone.InstallDirectory, false);
                         }
                         else
                         {
@@ -580,7 +578,7 @@ namespace Playnite.Controllers
                     {
                         InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = proc.Id });
                         stopWatch = Stopwatch.StartNew();
-                        procMon.WatchProcessTree(proc);
+                        _ = procMon.WatchProcessTree(proc);
                     }
                     else
                     {
@@ -593,7 +591,7 @@ namespace Playnite.Controllers
                     {
                         InvokeOnStarted(new GameStartedEventArgs() { StartedProcessId = proc.Id });
                         stopWatch = Stopwatch.StartNew();
-                        procMon.WatchSingleProcess(proc);
+                        _ = procMon.WatchSingleProcess(proc);
                     }
                     else
                     {
@@ -606,7 +604,7 @@ namespace Playnite.Controllers
                     if (!watchDir.IsNullOrEmpty() && FileSystem.DirectoryExists(watchDir))
                     {
                         stopWatch = Stopwatch.StartNew();
-                        procMon.WatchDirectoryProcesses(watchDir, false);
+                        _ = procMon.WatchDirectoryProcesses(watchDir, false);
                     }
                     else
                     {
