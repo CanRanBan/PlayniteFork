@@ -84,8 +84,8 @@ namespace Playnite.Extensions.Markup
             lastUserThemeFound = false;
             var defaultTheme = "Default";
             var projectName = mode == ApplicationMode.Fullscreen ? "Playnite.FullscreenApp" : "Playnite.DesktopApp";
-            var slnPath = Path.Combine(Environment.GetEnvironmentVariable("Playnite_Source_Dir", EnvironmentVariableTarget.User), projectName);
-            var themePath = Path.Combine(slnPath, "Themes", ThemeManager.GetThemeRootDir(mode), defaultTheme);
+            var projectPath = Path.Combine(Environment.GetEnvironmentVariable("Playnite_Source_Dir", EnvironmentVariableTarget.User), projectName);
+            var themePath = Path.Combine(projectPath, "Themes", ThemeManager.GetThemeRootDir(mode), defaultTheme);
             return new ThemeManifest()
             {
                 DirectoryName = defaultTheme,
