@@ -460,8 +460,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\contributors.txt" />
     <SplashScreen Include="SplashScreen.png" />
-    <None Include="..\Playnite\license.txt">
-      <Link>license.txt</Link>
+    <None Include="..\Playnite\LICENSE.txt">
+      <Link>LICENSE.txt</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="Themes\Desktop\Default\Constants.xaml">

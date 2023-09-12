@@ -575,7 +575,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="license.txt" />
+    <None Include="LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

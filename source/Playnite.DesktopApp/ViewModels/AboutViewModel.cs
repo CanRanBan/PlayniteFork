@@ -117,7 +117,7 @@ namespace Playnite.DesktopApp.ViewModels
         {
             get => new RelayCommand<object>((a) =>
             {
-                ProcessStarter.StartProcess(Path.Combine(PlaynitePaths.ProgramPath, "license.txt"));
+                ProcessStarter.StartProcess(Path.Combine(PlaynitePaths.ProgramPath, "LICENSE.txt"));
             });
         }
 
