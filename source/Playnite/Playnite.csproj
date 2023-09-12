@@ -599,7 +599,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="LICENSE.txt" />
+    <None Include="LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
