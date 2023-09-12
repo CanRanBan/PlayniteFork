@@ -1231,10 +1231,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SETX Playnite_Source_Dir "$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd('\'))))"</PostBuildEvent>
     <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
   <PropertyGroup>
     <LargeAddressAware>true</LargeAddressAware>
   </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="('$(Playnite_Source_Dir)' == '') OR ('$(Playnite_Source_Dir)' != '$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd(%27\%27))))')">
+    <Exec Command="SETX Playnite_Source_Dir %22$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd('\'))))%22" />
+  </Target>
 </Project>
