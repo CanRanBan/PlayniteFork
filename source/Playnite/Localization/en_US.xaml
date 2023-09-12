@@ -1,5 +1,7 @@
-﻿
-    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!--
     THIS FILE IS NOT PART OF THE THEME, DO NOT MODIFY!
     -->
@@ -58,7 +60,7 @@ If you want to help us fix this issue, please send diagnostic information. Thank
     <sys:String x:Key="LOCCrashUserActionsDescription">Actions taken before the crash (in English):</sys:String>
     <sys:String x:Key="LOCLibraryManager">Library Manager</sys:String>
     <sys:String x:Key="LOCGameRemoveAskTitle">Remove Game(s)?</sys:String>
-    <sys:String x:Key="LOCGameRemoveRunningError">Cannot remove - Game or installer is running. </sys:String>
+    <sys:String x:Key="LOCGameRemoveRunningError">Cannot remove - Game or installer is running.</sys:String>
     <sys:String x:Key="LOCGameUninstallRunningError">Cannot uninstall - Game is running.</sys:String>
     <sys:String x:Key="LOCGameRemoveAskMessage" xml:space="preserve">Are you sure you want to remove {0}?</sys:String>
     <sys:String x:Key="LOCGamesRemoveAskMessage" xml:space="preserve">Are you sure you want to remove {0} games?</sys:String>
@@ -827,7 +829,7 @@ More information at https://playnite.link/cefstartup</sys:String>
     <sys:String x:Key="LOCSpecificExtensionLoadSDKError">Can't load "{0}" extension, current Playnite version is not supported.</sys:String>
     <sys:String x:Key="LOCSpecificThemeLoadError">Theme "{0}" failed to load properly.</sys:String>
     <sys:String x:Key="LOCSpecificThemeLoadSDKError">Can't load "{0}" theme, current Playnite version is not supported.</sys:String>
-    <sys:String x:Key="LOCGeneralExtensionLoadError">Extension failed to load properly.</sys:String>    
+    <sys:String x:Key="LOCGeneralExtensionLoadError">Extension failed to load properly.</sys:String>
     <sys:String x:Key="LOCGeneralThemeLoadError">Theme failed to load properly.</sys:String>
     <sys:String x:Key="LOCGeneralExtensionInstallApiVersionFails">Theme/Extension is using unsupported API version.</sys:String>
     <sys:String x:Key="LOCGeneralExtensionInstallSuccess">Installation was successful.</sys:String>
@@ -861,7 +863,7 @@ New version: {2}</sys:String>
     <sys:String x:Key="LOCUrlNavigationMessage" xml:space="preserve">You are about to leave Playnite and navigate to the following web page using your default web browser. Do you want to continue?
 
 {0}</sys:String>
-    <sys:String x:Key="LOCGameImageSizeWarning" xml:space="preserve">The selected image(s) might be too large for optimal performance. Using very large images can result in worse UI responsiveness and increased memory usage. 
+    <sys:String x:Key="LOCGameImageSizeWarning" xml:space="preserve">The selected image(s) might be too large for optimal performance. Using very large images can result in worse UI responsiveness and increased memory usage.
 
 Maximum recommended resolutions:
 Icons: {0} mega pixels
@@ -897,11 +899,11 @@ Backgrounds: {2} mega pixels</sys:String>
 - Database location
 - Import exclusion list
 - Extension settings, including library integrations
-    
+
 Application restart is requred to finish the process. Do you want to reset settings?</sys:String>
     <sys:String x:Key="LOCSettingsForDevelopers">For developers</sys:String>
     <sys:String x:Key="LOCSettingsExternalExtensions">External extensions</sys:String>
-    <sys:String x:Key="LOCSettingsNewExternalExtensionBox">Enter full folder path.</sys:String>    
+    <sys:String x:Key="LOCSettingsNewExternalExtensionBox">Enter full folder path.</sys:String>
     <!--Common Library-->
     <sys:String x:Key="LOCCommonLinksAchievements">Achievements</sys:String>
     <sys:String x:Key="LOCCommonLinksForum">Forum</sys:String>
@@ -966,7 +968,7 @@ If you want to install or uninstall additional integrations, use "Add-ons" optio
     <sys:String x:Key="LOCActionTrackingModeDirectory">Folder</sys:String>
     <sys:String x:Key="LOCActionTrackingOriginalProcess">Original process</sys:String>
     <sys:String x:Key="LOCDevelTraceLogEnable">Log trace messages</sys:String>
-    <sys:String x:Key="LOCMultiEditOverwriteWarning">Following changes overwrite data for all currently selected games!</sys:String>    
+    <sys:String x:Key="LOCMultiEditOverwriteWarning">Following changes overwrite data for all currently selected games!</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeNone">None</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeUniform">Uniform</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeBetweenItemsOnly">Items only</sys:String>
@@ -975,7 +977,7 @@ If you want to install or uninstall additional integrations, use "Add-ons" optio
     <sys:String x:Key="LOCSmoothScrolling">Smooth scrolling</sys:String>
     <sys:String x:Key="LOCSmoothScrollingSpeed">Animation speed</sys:String>
     <sys:String x:Key="LOCAskRemoveItemTitle">Remove item?</sys:String>
-    <sys:String x:Key="LOCAskRemoveItemMessage">Are you sure you want to remove this item?</sys:String>    
+    <sys:String x:Key="LOCAskRemoveItemMessage">Are you sure you want to remove this item?</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelItems">Show buttons on top panel:</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelGeneralViewItem">General view settings</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelGroupingItem">Grouping settings</sys:String>
@@ -1004,7 +1006,7 @@ Disabling this can lead to issues with games not getting input focus on startup!
     <sys:String x:Key="LOCSettingsFontSizeSmall">Font Size Small</sys:String>
     <sys:String x:Key="LOCSettingsXInputProcessing">XInput Device Support</sys:String>
     <sys:String x:Key="LOCSettingsXInputProcessingDescription" xml:space="preserve">If disabled, Playnite won't accept any XInput interface inputs.
-        
+
 Disable if you use tools that translate XInput inputs to mouse/keyboards inputs and you are getting double inputs in Playnite.</sys:String>
     <sys:String x:Key="LOCSettingsShowItemsMainMenuHeader">Show items on main menu:</sys:String>
     <sys:String x:Key="LOCSettingsSwapMainViewXAButtons">Inverted X/A main view button binding</sys:String>
@@ -1036,17 +1038,17 @@ Disable if you use tools that translate XInput inputs to mouse/keyboards inputs 
     <sys:String x:Key="LOCSettingsImageScalingQuality">Quality</sys:String>
     <sys:String x:Key="LOCSettingsImageScalerModeTooltip" xml:space="preserve">Quality:
 Best image quality, slow, high memory usage.
-    
+
 Balanced:
 Good quality, fast, low memory usage.
-    
+
 Alternative:
 Better quality, medium speed, low memory usage.</sys:String>
     <sys:String x:Key="LOCSelectFileTooltip">Select file…</sys:String>
     <sys:String x:Key="LOCSelectDirectoryTooltip">Select folder…</sys:String>
     <sys:String x:Key="LOCStartupScript">Startup script</sys:String>
     <sys:String x:Key="LOCAddonPerfNotice" xml:space="preserve">Please note that both extensions and themes can greatly affect Playnite's performance, stability and security.
-    
+
 If you start experiencing some issues after installing a theme or an extension, try disabling/uninstalling them first to see if they are root of the issue.</sys:String>
     <sys:String x:Key="LOCGameActionSelectOnStart">Choose on startup</sys:String>
     <sys:String x:Key="LOCEmulatorSelectOnStart">Choose on startup</sys:String>
@@ -1072,12 +1074,12 @@ If you start experiencing some issues after installing a theme or an extension, 
     <sys:String x:Key="LOCEmuScanConfigurations">Scan configurations</sys:String>
     <sys:String x:Key="LOCEmuCrcExcludeFileTypes">Exclude patterns from checksum scan</sys:String>
     <sys:String x:Key="LOCEmuCrcExcludeFileTypesTooltip">Files matching specified pattern(s) won't be scanned for checksum and will be matched by file name. See emulator help page for more information.</sys:String>
-    <sys:String x:Key="LOCEmuScanEmulator">Scan with emulator</sys:String>    
+    <sys:String x:Key="LOCEmuScanEmulator">Scan with emulator</sys:String>
     <sys:String x:Key="LOCScanConfigNameError">Name has to be set when saving new configuration.</sys:String>
     <sys:String x:Key="LOCScanConfigNoEmulatorError">Emulator or emulator profile is not set.</sys:String>
     <sys:String x:Key="LOCScanConfigDirectoryError">Directory to scan is not specified or it doesn't exist.</sys:String>
-    <sys:String x:Key="LOCScanConfigError">Scan configuration is not set properly.</sys:String>    
-    <sys:String x:Key="LOCEmuScanIncludeGlobalUpdate">Include in bulk scan auto-scan</sys:String>    
+    <sys:String x:Key="LOCScanConfigError">Scan configuration is not set properly.</sys:String>
+    <sys:String x:Key="LOCEmuScanIncludeGlobalUpdate">Include in bulk scan auto-scan</sys:String>
     <sys:String x:Key="LOCEmulatorScanFailed">Failed to scan folder for emulators.</sys:String>
     <sys:String x:Key="LOCEmulatedGameScanFailed">Failed to scan folder(s) for emulated games.</sys:String>
     <sys:String x:Key="LOCEmuScanHideImported">Hide imported</sys:String>
@@ -1119,7 +1121,7 @@ More information at https://playnite.link/adminfaq</sys:String>
     <sys:String x:Key="LOCInstallSizeScanUseSizeOnDiskOptionTooltip" xml:space="preserve">If enabled, scans will be slower and will get the real size that files use in the drive.
 If disabled, scans will be faster and will use the size of the files themselves.</sys:String>
     <sys:String x:Key="LOCWarningBlacklistedExtensions" xml:space="preserve">Following add-on(s) have been reported as potentially problematic, either due to high stability/performance impact or security issues. We strongly recommend that you uninstall them:
-        
+
 {0}
     </sys:String>
     <sys:String x:Key="LOCEmuExcludeOnlineFiles">Exclude online files from scan</sys:String>
@@ -1130,7 +1132,7 @@ Supported only for: Google Drive, DropBox, OneDrive</sys:String>
     <sys:String x:Key="LOCMetadatSetAllFieldsToValue">Apply to all</sys:String>
     <sys:String x:Key="LOCOverrideInstallState">Override installation state</sys:String>
     <sys:String x:Key="LOCOverrideInstallStateTooltip" xml:space="preserve">When set, Playnite will ignore installation state (including installation directory) set by the integration plugin that imports this game.
-        
+
 This option may not fully work with plugins that use specific game import method unless they also take this override option into account.</sys:String>
     <sys:String x:Key="LOCOptionOnlyManually">Only manually</sys:String>
     <sys:String x:Key="LOCOptionOnceADay">Once a day</sys:String>
@@ -1208,10 +1210,10 @@ Strict matching can be enforced on an individual case by prefixing filter with !
     <sys:String x:Key="LOCBackupOptionExtensionsData">Extensions data</sys:String>
     <sys:String x:Key="LOCBackupOptionThemes">Installed themes</sys:String>
     <sys:String x:Key="LOCBackupRestoreMessage" xml:space="preserve">Select data to be restored from specified backup file.
-    
+
 Playnite will automatically restart to start backup restore process.</sys:String>
     <sys:String x:Key="LOCBackupDataBackupMessage" xml:space="preserve">Select items to be included with data backup. Application settings and game library data are included by default.
-    
+
 Playnite will automatically restart to start backup process.</sys:String>
     <sys:String x:Key="LOCSettingsEnableAutomaticBackup">Automatic data backup</sys:String>
     <sys:String x:Key="LOCSettingsAutoBackupFrequency">Auto backup frequency</sys:String>
@@ -1224,7 +1226,7 @@ Playnite will automatically restart to start backup process.</sys:String>
 New major releases will not result in update notification.</sys:String>
     <sys:String x:Key="LOCSettingsPastWeekRelativeFormat">Use relative dates for the past week</sys:String>
     <sys:String x:Key="LOCSettingsPastWeekRelativeFormatTooltip" xml:space="preserve">Use relative dates in "Today", "Yesterday" etc. format if the date is less than a week old.
-    
+
 The specified date format will be used for all other dates.</sys:String>
 
     <sys:String x:Key="LOCSettingsWebImageSearch">Web image search</sys:String>
@@ -1246,6 +1248,6 @@ The specified date format will be used for all other dates.</sys:String>
     <sys:String x:Key="LOCProgramFolder">Program folder</sys:String>
     <sys:String x:Key="LOCUserDataFolder">User data directory</sys:String>
     <sys:String x:Key="LOCDBCorruptionCrashMessage" xml:space="preserve">Library file corruption has been detected, Playnite will now shutdown.
-    
+
 Open new issue on Playnite's GitHub page with a request to fix corruption in your files.</sys:String>
 </ResourceDictionary>

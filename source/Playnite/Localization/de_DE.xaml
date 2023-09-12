@@ -1,5 +1,7 @@
-﻿<?xml version="1.0"?>
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <!--
     THIS FILE IS NOT PART OF THE THEME, DO NOT MODIFY!
     -->
@@ -462,7 +464,7 @@ Kann auch in den Anwendungseinstellungen geändert werden.</sys:String>
     <!--FirstTime Wizard-->
     <sys:String x:Key="LOCFirstWindowTitle">Einrichtungsassistent</sys:String>
     <sys:String x:Key="LOCFirstIntro" xml:space="preserve">Dieser Assistent hilft dir beim automatischen Importieren von Spielen und der Konfiguration externer Spielebibliotheken. Playnite kann Spiele von mehreren Spieleplattformen wie Steam oder GOG automatisch importieren und zudem deine Bibliothek durch automatisches Aktualisieren während des Programmstarts aktuell halten.
-        
+
 Natürlich kannst du auch später Spiele sämtlicher Plattformen manuell hinzufügen, indem du im Hauptmenü auf die Schaltfläche »Playnite« klickst.
 .</sys:String>
     <sys:String x:Key="LOCFirstExternalTitle">Bibliotheksintegration</sys:String>
@@ -828,7 +830,7 @@ Mehr Informationen unter https://playnite.link/cefstartup</sys:String>
     <sys:String x:Key="LOCSpecificExtensionLoadSDKError">Die Erweiterung »{0}« kann nicht geladen werden, da sie die derzeitige Playnite-Version nicht unterstützt.</sys:String>
     <sys:String x:Key="LOCSpecificThemeLoadError">Design »{0}« konnte nicht ordnungsgemäß geladen werden.</sys:String>
     <sys:String x:Key="LOCSpecificThemeLoadSDKError">Das Design »{0}« kann nicht geladen werden, da es die derzeitige Playnite-Version nicht unterstützt.</sys:String>
-    <sys:String x:Key="LOCGeneralExtensionLoadError">Erweiterung konnte nicht ordnungsgemäß geladen werden.</sys:String>    
+    <sys:String x:Key="LOCGeneralExtensionLoadError">Erweiterung konnte nicht ordnungsgemäß geladen werden.</sys:String>
     <sys:String x:Key="LOCGeneralThemeLoadError">Design konnte nicht ordnungsgemäß geladen werden.</sys:String>
     <sys:String x:Key="LOCGeneralExtensionInstallApiVersionFails">Design/Erweiterung verwendet eine nicht unterstützte API-Version.</sys:String>
     <sys:String x:Key="LOCGeneralExtensionInstallSuccess">Installation war erfolgreich.</sys:String>
@@ -898,11 +900,11 @@ Hintergründe: {2} Megapixel</sys:String>
 - Datenbankverzeichnis
 - Import-Ausschlussliste
 - Erweiterungseinstellungen, einschließlich Bibliotheksintegrationen
-    
+
 Zum Abschließen ist ein Neustart erforderlich. Möchtest du die Einstellungen zurücksetzen?</sys:String>
     <sys:String x:Key="LOCSettingsForDevelopers">Für Entwickler</sys:String>
     <sys:String x:Key="LOCSettingsExternalExtensions">Externe Erweiterungen</sys:String>
-    <sys:String x:Key="LOCSettingsNewExternalExtensionBox">Gib den vollständigen Ordnerpfad ein.</sys:String>    
+    <sys:String x:Key="LOCSettingsNewExternalExtensionBox">Gib den vollständigen Ordnerpfad ein.</sys:String>
     <!--Common Library-->
     <sys:String x:Key="LOCCommonLinksAchievements">Errungenschaften</sys:String>
     <sys:String x:Key="LOCCommonLinksForum">Forum</sys:String>
@@ -967,7 +969,7 @@ Falls du weitere Integrationen installieren oder deinstallieren möchtest, verwe
     <sys:String x:Key="LOCActionTrackingModeDirectory">Ordner</sys:String>
     <sys:String x:Key="LOCActionTrackingOriginalProcess">Originalprozess</sys:String>
     <sys:String x:Key="LOCDevelTraceLogEnable">Protokollmeldungen aufzeichnen</sys:String>
-    <sys:String x:Key="LOCMultiEditOverwriteWarning">Folgende Änderungen überschreiben Daten aller aktuell ausgewählten Spiele!</sys:String>    
+    <sys:String x:Key="LOCMultiEditOverwriteWarning">Folgende Änderungen überschreiben Daten aller aktuell ausgewählten Spiele!</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeNone">Keiner</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeUniform">Einheitlich</sys:String>
     <sys:String x:Key="LOCGridViewSpacingModeBetweenItemsOnly">Nur Elemente</sys:String>
@@ -976,7 +978,7 @@ Falls du weitere Integrationen installieren oder deinstallieren möchtest, verwe
     <sys:String x:Key="LOCSmoothScrolling">Sanftes Scrollen</sys:String>
     <sys:String x:Key="LOCSmoothScrollingSpeed">Animationsgeschwindigkeit</sys:String>
     <sys:String x:Key="LOCAskRemoveItemTitle">Element entfernen?</sys:String>
-    <sys:String x:Key="LOCAskRemoveItemMessage">Möchtest du dieses Element wirklich entfernen?</sys:String>    
+    <sys:String x:Key="LOCAskRemoveItemMessage">Möchtest du dieses Element wirklich entfernen?</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelItems">Schaltflächen in oberer Leiste anzeigen:</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelGeneralViewItem">Allgemeine Ansichtseinstellungen</sys:String>
     <sys:String x:Key="LOCSettingsTopPanelGroupingItem">Gruppierungseinstellungen</sys:String>
@@ -1005,7 +1007,7 @@ Das Deaktivieren dieser Option kann zu Problemen mit Spielen führen, die beim S
     <sys:String x:Key="LOCSettingsFontSizeSmall">Schriftgröße klein</sys:String>
     <sys:String x:Key="LOCSettingsXInputProcessing">XInput-Geräteunterstützung</sys:String>
     <sys:String x:Key="LOCSettingsXInputProcessingDescription" xml:space="preserve">Falls deaktiviert, wird Playnite keinerlei Eingaben der XInput-Schnittstelle akzeptieren.
-        
+
 Deaktivieren, falls du Tools verwendest, die X-Input-Eingaben in Maus-/Tastatureingaben übersetzen und du die Eingaben in Playnite doppelt erhälst.</sys:String>
     <sys:String x:Key="LOCSettingsShowItemsMainMenuHeader">Elemente im Hauptmenü anzeigen:</sys:String>
     <sys:String x:Key="LOCSettingsSwapMainViewXAButtons">Invertierte Schaltflächenbindung der X/A-Hauptansicht</sys:String>
@@ -1037,10 +1039,10 @@ Deaktivieren, falls du Tools verwendest, die X-Input-Eingaben in Maus-/Tastature
     <sys:String x:Key="LOCSettingsImageScalingQuality">Qualität</sys:String>
     <sys:String x:Key="LOCSettingsImageScalerModeTooltip" xml:space="preserve">Qualität:
 Beste Bildqualität, langsam, hoher Speicherverbrauch.
-    
+
 Ausgewogen:
 Gute Bildqualität, schnell, geringer Speicherverbrauch.
-    
+
 Alternativ:
 Bessere Bildqualität, mittlere Geschwindigkeit, geringer Speicherverbrauch.</sys:String>
     <sys:String x:Key="LOCSelectFileTooltip">Datei auswählen …</sys:String>
@@ -1073,12 +1075,12 @@ Falls nach dem Installieren von Designs oder Erweiterungen Probleme auftreten, v
     <sys:String x:Key="LOCEmuScanConfigurations">Scan-Konfigurationen</sys:String>
     <sys:String x:Key="LOCEmuCrcExcludeFileTypes">Ausschlussmuster für Prüfsummen-Scan</sys:String>
     <sys:String x:Key="LOCEmuCrcExcludeFileTypesTooltip">Mit angebenen Muster(n) übereinstimmende Dateien werden nicht für die Prüfsumme durchsucht und werden über den Dateinamen zugeordnet. Siehe Emulator-Hilfeseite für weitere Informationen.</sys:String>
-    <sys:String x:Key="LOCEmuScanEmulator">Mit Emulator durchsuchen</sys:String>    
+    <sys:String x:Key="LOCEmuScanEmulator">Mit Emulator durchsuchen</sys:String>
     <sys:String x:Key="LOCScanConfigNameError">Der Name muss festgelegt sein, um eine neue Konfiguration zu speichern.</sys:String>
     <sys:String x:Key="LOCScanConfigNoEmulatorError">Emulator oder Emulatorprofil ist nicht festgelegt.</sys:String>
     <sys:String x:Key="LOCScanConfigDirectoryError">Zu durchsuchendes Verzeichnis ist nicht angegeben oder existiert nicht.</sys:String>
-    <sys:String x:Key="LOCScanConfigError">Scan-Konfiguration ist nicht richtig festgelegt.</sys:String>    
-    <sys:String x:Key="LOCEmuScanIncludeGlobalUpdate">In automatischen Massenscan miteinbeziehen</sys:String>    
+    <sys:String x:Key="LOCScanConfigError">Scan-Konfiguration ist nicht richtig festgelegt.</sys:String>
+    <sys:String x:Key="LOCEmuScanIncludeGlobalUpdate">In automatischen Massenscan miteinbeziehen</sys:String>
     <sys:String x:Key="LOCEmulatorScanFailed">Ordner konnte nicht nach Emulatoren durchsucht werden.</sys:String>
     <sys:String x:Key="LOCEmulatedGameScanFailed">Ordner konnte(n) nicht nach emulierten Spielen durchsucht werden.</sys:String>
     <sys:String x:Key="LOCEmuScanHideImported">Importierte ausblenden</sys:String>
@@ -1107,7 +1109,7 @@ Falls nach dem Installieren von Designs oder Erweiterungen Probleme auftreten, v
     <sys:String x:Key="LOCSortingNameAutofillButton">Sortiernamen ausfüllen für Spiele ohne Sortiernamen</sys:String>
     <sys:String x:Key="LOCSettingsSortingLabel">Sortierung</sys:String>
     <sys:String x:Key="LOCSortingNameAutofillProgress">Sortiernamen werden mit Werten gefüllt …</sys:String>
-    <sys:String x:Key="LOCNahimicServiceWarning" xml:space="preserve">Auf deinem System wurde der Nahimic-Dienst erkannt. Dieser Dienst ist dafür bekannt, Rendering-Probleme in Playnite (und anderen Anwendungen) zu verursachen.        
+    <sys:String x:Key="LOCNahimicServiceWarning" xml:space="preserve">Auf deinem System wurde der Nahimic-Dienst erkannt. Dieser Dienst ist dafür bekannt, Rendering-Probleme in Playnite (und anderen Anwendungen) zu verursachen.
 
 Falls du in Playnite Grafikfehler oder andere Darstellungsprobleme feststellst, empfehlen wir, den Nahimic-Dienst zu deaktivieren oder vollständig zu deinstallieren.
 
@@ -1120,7 +1122,7 @@ Mehr Informationen unter https://playnite.link/adminfaq</sys:String>
     <sys:String x:Key="LOCInstallSizeScanUseSizeOnDiskOptionTooltip" xml:space="preserve">Wenn aktiviert, werden die Scans langsamer und die tatsächliche Größe ermittelt, die die Dateien auf dem Laufwerk einnehmen.
 Wenn deaktiviert, werden die Scans schneller und die Größe der Dateien selbst wird verwendet.</sys:String>
     <sys:String x:Key="LOCWarningBlacklistedExtensions" xml:space="preserve">Folgende Add-on(s) wurden als potentiell problematisch gemeldet, entweder wegen starker Beeinträchtigung der Stabilität/Leistung oder wegen Sicherheitsbedenken. Wir empfehlen nachdrücklich diese zu deinstallieren:
-        
+
 {0}
     </sys:String>
     <sys:String x:Key="LOCEmuExcludeOnlineFiles">Online-Dateien von Scan ausschließen</sys:String>
@@ -1131,7 +1133,7 @@ Nur Unterstützung für: Google Drive, DropBox, OneDrive</sys:String>
     <sys:String x:Key="LOCMetadatSetAllFieldsToValue">Auf alle anwenden</sys:String>
     <sys:String x:Key="LOCOverrideInstallState">Installationsstatus übergehen</sys:String>
     <sys:String x:Key="LOCOverrideInstallStateTooltip" xml:space="preserve">Falls aktiviert, ignoriert Playnite den Installationszustand (einschließlich des Installationsverzeichnisses), der von dem Integrations-Plugin festgelegt wurde, das dieses Spiel importiert.
-        
+
 Diese Option funktioniert möglicherweise nicht vollständig mit Plugins, die eine bestimmte Methode zum Importieren von Spielen verwenden, es sei denn, diese berücksichtigen auch diese Option.</sys:String>
     <sys:String x:Key="LOCOptionOnlyManually">Nur manuell</sys:String>
     <sys:String x:Key="LOCOptionOnceADay">Täglich</sys:String>
@@ -1209,10 +1211,10 @@ Strenge Übereinstimmung kann im Einzelfall erzwungen werden, indem dem Filter d
     <sys:String x:Key="LOCBackupOptionExtensionsData">Erweiterungsdaten</sys:String>
     <sys:String x:Key="LOCBackupOptionThemes">Installierte Designs</sys:String>
     <sys:String x:Key="LOCBackupRestoreMessage" xml:space="preserve">Wählen Sie die Daten aus, die aus der angegebenen Sicherungsdatei wiederhergestellt werden sollen.
-    
+
 Playnite wird automatisch neu starten, um die Sicherungswiederherstellung zu starten.</sys:String>
     <sys:String x:Key="LOCBackupDataBackupMessage" xml:space="preserve">Elemente zur Datensicherung auswählen. Anwendungseinstellungen und Spielbibliotheksdaten sind standardmäßig enthalten.
-    
+
 Playnite wird automatisch neu gestartet, um die Sicherung zu starten.</sys:String>
     <sys:String x:Key="LOCSettingsEnableAutomaticBackup">Automatische Datensicherung</sys:String>
     <sys:String x:Key="LOCSettingsAutoBackupFrequency">Häufigkeit der automatischen Datensicherung</sys:String>
@@ -1225,7 +1227,7 @@ Playnite wird automatisch neu gestartet, um die Sicherung zu starten.</sys:Strin
 Neue Hauptversionen werden nicht zu einer Updatebenachrichtigung führen.</sys:String>
     <sys:String x:Key="LOCSettingsPastWeekRelativeFormat">Relative Datumsangabe für die letzte Woche verwenden</sys:String>
     <sys:String x:Key="LOCSettingsPastWeekRelativeFormatTooltip" xml:space="preserve">Relative Datumsangabe (&quot;Heute&quot;, &quot;Gestern&quot;, etc.) für Daten werden, die nicht mehr als eine Woche zurückliegen.
-    
+
 Das angegebene Datumsformat wird für alle anderen Daten verwendet.</sys:String>
 
     <sys:String x:Key="LOCSettingsWebImageSearch">Webbild-Suche</sys:String>
@@ -1247,6 +1249,6 @@ Das angegebene Datumsformat wird für alle anderen Daten verwendet.</sys:String>
     <sys:String x:Key="LOCProgramFolder">Programmordner</sys:String>
     <sys:String x:Key="LOCUserDataFolder">Benutzerdatenverzeichnis</sys:String>
     <sys:String x:Key="LOCDBCorruptionCrashMessage" xml:space="preserve">Die Bibliotheksdatei wurde beschädigt, Playnite wird nun heruntergefahren.
-    
+
 Melde das Problem auf der GitHub-Seite von Playnite mit einer Anfrage, die Beschädigung deiner Dateien zu beheben.</sys:String>
 </ResourceDictionary>
