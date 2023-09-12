@@ -15,7 +15,7 @@ namespace Playnite
         public const string ThemeManifestFileName = "theme.yaml";
         public const string PackedThemeFileExtention = ".pthm";
         public const string PackedExtensionFileExtention = ".pext";
-        public const string EngLocSourceFileName = "LocSource.xaml";
+        public const string EngLocSourceFileName = "en_US.xaml";
 
         public const string ThemeSlnFileName = "Theme.sln";
         public const string ThemeProjFileName = "Theme.csproj";
