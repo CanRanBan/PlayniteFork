@@ -203,12 +203,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\build\ExtensionsRefIgnoreList.txt">
-      <Link>Templates\Extensions\ExtensionsRefIgnoreList.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\Playnite.DesktopApp\ControlGalleryView.xaml">
       <Link>Templates\Themes\Desktop\ControlGalleryView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -231,6 +225,11 @@
     <PackageReference Include="NLog">
       <Version>4.7.6</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\Extensions\ExtensionsRefIgnoreList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
