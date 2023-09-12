@@ -147,8 +147,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Playnite\Localization\LocSource.xaml">
-      <Link>Templates\Themes\LocSource.xaml</Link>
+    <None Include="..\..\Playnite\Localization\en_US.xaml">
+      <Link>Templates\Themes\en_US.xaml</Link>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
