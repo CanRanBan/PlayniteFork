@@ -502,10 +502,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>XInputInterface.dll</TargetPath>
     </ContentWithTargetPath>
-    <None Include="..\..\references\CefSharpRedist\*.*">
-      <TargetPath>%(Filename)%(Extension)</TargetPath>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <ContentWithTargetPath Include="..\..\references\msvcr110.dll">
       <Link>Dependencies\msvcr110.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
