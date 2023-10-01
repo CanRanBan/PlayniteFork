@@ -45,6 +45,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMetadataPlugin", "Sourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "Source\Tests\TestApp\TestApp.csproj", "{94B6E43B-3907-4C1B-A804-AF1D1ADEF286}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{035EF581-34EE-40ED-8BE9-F1A50B393E41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development", "Development", "{BC6C934B-5E82-4D4B-B075-F15CAE9D13BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playnite", "Playnite", "{E2AC9A1F-DD52-4B48-902B-898F2C65259B}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Configuration\Development\Playnite\Common.config = Source\Configuration\Development\Playnite\Common.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distribution", "Distribution", "{6DDDA8DA-3AC4-44EF-A30F-FF1AA4EEECFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playnite", "Playnite", "{93574DF9-1305-4F61-AEEF-6B588B1BD2FA}"
+	ProjectSection(SolutionItems) = preProject
+		Source\Configuration\Distribution\Playnite\Common.config = Source\Configuration\Distribution\Playnite\Common.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -301,6 +317,10 @@ Global
 		{256026D4-A05D-438C-BD11-2D3FBADB2B4C} = {FBE3E4C8-611E-435D-B47C-FE006AAA8C4A}
 		{AFE32BF4-E669-4E3F-8363-1D32BEB158F5} = {FBE3E4C8-611E-435D-B47C-FE006AAA8C4A}
 		{94B6E43B-3907-4C1B-A804-AF1D1ADEF286} = {FBE3E4C8-611E-435D-B47C-FE006AAA8C4A}
+		{BC6C934B-5E82-4D4B-B075-F15CAE9D13BF} = {035EF581-34EE-40ED-8BE9-F1A50B393E41}
+		{E2AC9A1F-DD52-4B48-902B-898F2C65259B} = {BC6C934B-5E82-4D4B-B075-F15CAE9D13BF}
+		{6DDDA8DA-3AC4-44EF-A30F-FF1AA4EEECFE} = {035EF581-34EE-40ED-8BE9-F1A50B393E41}
+		{93574DF9-1305-4F61-AEEF-6B588B1BD2FA} = {6DDDA8DA-3AC4-44EF-A30F-FF1AA4EEECFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3300FF38-9F6F-4C0F-87F3-776D6C64846D}

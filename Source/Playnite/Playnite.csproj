@@ -483,12 +483,28 @@
     <Compile Include="Windows\WindowFactory.cs" />
     <Compile Include="Windows\WindowPositionHandler.cs" />
   </ItemGroup>
+  <Choose>
+    <When Condition="'$(Configuration)' == 'ReleaseUpgrade'">
+      <ItemGroup>
+        <None Include="..\Configuration\Distribution\Playnite\Common.config">
+          <Link>Common.config</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <SubType>Designer</SubType>
+        </None>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <None Include="..\Configuration\Development\Playnite\Common.config">
+          <Link>Common.config</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <SubType>Designer</SubType>
+        </None>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Common.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="crash_reporter.cfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
