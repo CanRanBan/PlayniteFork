@@ -171,6 +171,7 @@
     <Reference Include="System.Management.Automation" />
     <Reference Include="Windows">
       <HintPath>..\..\references\Windows.winmd</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="XInputDotNetPure">
