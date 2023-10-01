@@ -665,4 +665,10 @@
   <Target Name="PreBuild" AfterTargets="PreBuildEvent" Condition="('$(Playnite_Source_Dir)' == '') OR ('$(Playnite_Source_Dir)' != '$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd(%27\%27))))')">
     <Exec Command="SETX Playnite_Source_Dir %22$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd('\'))))%22" />
   </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="('$(Configuration)' == 'ReleaseUpgrade') AND  ('$(Playnite_Source_Dir)' != '') AND ('$(Playnite_Dir)' != '')">
+    <Exec IgnoreExitCode="true" Command="robocopy %22$(TargetDir.TrimEnd('\'))%22 %22$(Playnite_Dir)%22 /mir /copy:DAT /dcopy:DAT /xd %22$(Playnite_Dir)\Emulation\Database%22 %22$(Playnite_Dir)\Extensions%22 %22$(Playnite_Dir)\Templates%22 %22$(Playnite_Dir)\Themes\Desktop%22 %22$(Playnite_Dir)\Themes\Fullscreen\Default\audio%22 /xf %22*.log%22 %22Hardcodet.Wpf.TaskbarNotification.???%22 %22Playnite.DesktopApp.*%22 %22Toolbox.*%22 %22unins000.*%22 %22Windows.winmd%22 /unilog:%22$(Playnite_Source_Dir)\RoboCopy - Logs\RoboCopy - Log - ReleaseUpgrade - Playnite.FullscreenApp.txt%22">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="$(ErrorCode) > 7" Text="RoboCopy failed during copy operation of Playnite.FullscreenApp project." />
+  </Target>
 </Project>
