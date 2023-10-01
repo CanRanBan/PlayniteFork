@@ -488,7 +488,7 @@
       <ItemGroup>
         <None Include="..\Configuration\Distribution\Playnite\Common.config">
           <Link>Common.config</Link>
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
           <SubType>Designer</SubType>
         </None>
       </ItemGroup>
@@ -497,7 +497,7 @@
       <ItemGroup>
         <None Include="..\Configuration\Development\Playnite\Common.config">
           <Link>Common.config</Link>
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
           <SubType>Designer</SubType>
         </None>
       </ItemGroup>
