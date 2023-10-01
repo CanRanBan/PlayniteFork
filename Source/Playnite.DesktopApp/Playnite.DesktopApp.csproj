@@ -470,6 +470,10 @@
     <Resource Include="..\..\references\Fonts\icofont.ttf">
       <Link>Fonts\icofont.ttf</Link>
     </Resource>
+    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+      <Link>NLog.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

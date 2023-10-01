@@ -504,6 +504,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+      <Link>NLog.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="App.config" />
     <None Include="crash_reporter.cfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -282,6 +282,10 @@
     <Content Include="Themes\Fullscreen\Default\audio\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+      <Link>NLog.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="app.manifest" />
     <None Include="Themes\Fullscreen\Default\Images\custom_cover_background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
