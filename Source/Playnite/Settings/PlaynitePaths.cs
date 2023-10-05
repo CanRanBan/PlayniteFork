@@ -75,7 +75,7 @@ namespace Playnite
             IsPortable = !File.Exists(UninstallerPath);
             ConfigRootPath = IsPortable ? ProgramPath : UserProgramDataPath;
             LocalizationsPath = Path.Combine(ProgramPath, LocalizationsDirName);
-            DataCachePath = Path.Combine(ConfigRootPath, "cache");
+            DataCachePath = Path.Combine(ConfigRootPath, "Cache");
 
             DesktopExecutablePath = Path.Combine(ProgramPath, "Playnite.DesktopApp.exe");
             FullscreenExecutablePath = Path.Combine(ProgramPath, "Playnite.FullscreenApp.exe");
@@ -90,7 +90,7 @@ namespace Playnite
             ThemesProgramPath = Path.Combine(ProgramPath, ThemesDirName);
             ThemesUserDataPath = Path.Combine(ConfigRootPath, ThemesDirName);
 
-            BrowserCachePath = Path.Combine(ConfigRootPath, "browsercache");
+            BrowserCachePath = Path.Combine(ConfigRootPath, "BrowserCache");
             TempPath = Path.Combine(Path.GetTempPath(), "Playnite");
             LogPath = Path.Combine(ConfigRootPath, "playnite.log");
             ConfigFilePath = Path.Combine(ConfigRootPath, ConfigFileName);
@@ -99,8 +99,8 @@ namespace Playnite
             BackupConfigFilePath = Path.Combine(ConfigRootPath, "Backup", ConfigFileName);
             BackupFullscreenConfigFilePath = Path.Combine(ConfigRootPath, "Backup", FullscreenConfigFileName);
             BackupWindowPositionsPath = Path.Combine(ConfigRootPath, "Backup", WindowPositionsFileName);
-            ImagesCachePath = Path.Combine(DataCachePath, "images");
-            IconsCachePath = Path.Combine(DataCachePath, "icons");
+            ImagesCachePath = Path.Combine(DataCachePath, "Images");
+            IconsCachePath = Path.Combine(DataCachePath, "Icons");
             JitProfilesPath = Path.Combine(ConfigRootPath, "JITProfiles");
             EmulationDatabasePath = Path.Combine(ProgramPath, "Emulation", "Database");
             SafeStartupFlagFile = Path.Combine(ConfigRootPath, "safestart.flag");
