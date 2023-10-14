@@ -73,7 +73,7 @@ namespace Playnite.DesktopApp.Controls
                 InputGestureText = command?.GestureText
             };
 
-            if (locString?.StartsWith("LOC") == true)
+            if (locString?.StartsWith("LOC", StringComparison.Ordinal) == true)
             {
                 item.SetResourceReference(MenuItem.HeaderProperty, locString);
             }
@@ -189,7 +189,7 @@ namespace Playnite.DesktopApp.Controls
 
             // Help
             var helpItem = AddMenuChild(Items, "LOCMenuHelpTitle", null);
-            AddMenuChild(helpItem.Items, "Wiki / FAQ", GlobalCommands.NavigateUrlCommand, UrlConstants.Wiki);
+            AddMenuChild(helpItem.Items, "LOCOpenGameManual", GlobalCommands.NavigateUrlCommand, UrlConstants.SdkDocs);
             AddMenuChild(helpItem.Items, "LOCMenuIssues", mainModel.ReportIssueCommand);
             AddMenuChild(helpItem.Items, "LOCSDKDocumentation", GlobalCommands.NavigateUrlCommand, UrlConstants.SdkDocs);
             helpItem.Items.Add(new Separator());

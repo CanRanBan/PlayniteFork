@@ -493,6 +493,14 @@ namespace Playnite
                 return;
             }
 
+            // ERROR_DISK_FULL
+            if (exception.HResult == unchecked((int)0x80070070))
+            {
+                Dialogs.ShowErrorMessage(exception.Message, LOC.CrashWindowTitle.GetLocalized());
+                Process.GetCurrentProcess().Kill();
+                return;
+            }
+
             if (crashInfo.IsExtensionCrash)
             {
                 crashModel = new CrashHandlerViewModel(
@@ -1195,7 +1203,16 @@ namespace Playnite
                 logger.Error(e, "Failed to stop pipe server.");
             }
 
-            Discord?.Dispose();
+            // Rare crash report of DiscordRPC not being loaded properly and then crashing on this
+            try
+            {
+                Discord?.Dispose();
+            }
+            catch (Exception e)
+            {
+                logger.Error(e, "Failed to dispose Discord RPC.");
+            }
+
             updateCheckTimer?.Dispose();
             MainModelBase?.RunShutdowScript();
             Extensions?.NotifiyOnApplicationStopped();
