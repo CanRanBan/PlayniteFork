@@ -114,7 +114,7 @@ namespace Playnite.Database
                     var game = Serialization.FromJson<Dictionary<string, object>>(FileSystem.ReadFileAsStringSafe(file));
                     if (game == null)
                     {
-                        // Some users have 0 sized game files for uknown reason.
+                        // Some users have 0 sized game files for unknown reason.
                         File.Delete(file);
                         continue;
                     }

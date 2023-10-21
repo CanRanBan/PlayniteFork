@@ -30,7 +30,7 @@ namespace Playnite.Scripting
             get; set;
         }
 
-        public ScriptFunctionExport(string name, string functionName, PlayniteScript script) : base (name)
+        public ScriptFunctionExport(string name, string functionName, PlayniteScript script) : base(name)
         {
             Name = name;
             FunctionName = functionName;
@@ -48,7 +48,7 @@ namespace Playnite.Scripting
         }
     }
 
-    public abstract class PlayniteScript: IDisposable
+    public abstract class PlayniteScript : IDisposable
     {
         private static ILogger logger = LogManager.GetLogger();
         public List<ApplicationEvent> SupportedEvents { get; internal set; }
@@ -98,7 +98,7 @@ namespace Playnite.Scripting
             }
             else
             {
-                throw new Exception("Cannot load script file, uknown format.");
+                throw new Exception("Cannot load script file, unknown format.");
             }
         }
 

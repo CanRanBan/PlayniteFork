@@ -16,7 +16,7 @@ namespace Playnite.SDK
         /// <summary>
         ///
         /// </summary>
-        Uknown,
+        Unknown,
         /// <summary>
         ///
         /// </summary>

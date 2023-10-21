@@ -242,7 +242,7 @@ namespace Playnite.DesktopApp.ViewModels
                     var def = Emulation.GetDefition(SelectedEmulator.BuiltInConfigId);
                     if (def == null)
                     {
-                        logger.Error($"Trying to add built-in emulator profile to uknown emulator def {SelectedEmulator.BuiltInConfigId}");
+                        logger.Error($"Trying to add built-in emulator profile to unknown emulator def {SelectedEmulator.BuiltInConfigId}");
                         return;
                     }
 

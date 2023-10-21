@@ -56,7 +56,7 @@ namespace Playnite.Database
 
         public bool IsReadOnly => false;
 
-        public GameDatabaseCollection CollectionType { get; } = GameDatabaseCollection.Uknown;
+        public GameDatabaseCollection CollectionType { get; } = GameDatabaseCollection.Unknown;
 
         public TItem this[Guid id]
         {
@@ -73,7 +73,7 @@ namespace Playnite.Database
 
         internal bool IsEventsEnabled { get; set; } = true;
 
-        public ItemCollection(BsonMapper mapper, bool isPersistent = true, GameDatabaseCollection type = GameDatabaseCollection.Uknown)
+        public ItemCollection(BsonMapper mapper, bool isPersistent = true, GameDatabaseCollection type = GameDatabaseCollection.Unknown)
         {
             this.isPersistent = isPersistent;
             this.mapper = mapper;
@@ -81,12 +81,12 @@ namespace Playnite.Database
             CollectionType = type;
         }
 
-        public ItemCollection(Action<TItem> initMethod, BsonMapper mapper, bool isPersistent = true, GameDatabaseCollection type = GameDatabaseCollection.Uknown) : this(mapper, isPersistent, type)
+        public ItemCollection(Action<TItem> initMethod, BsonMapper mapper, bool isPersistent = true, GameDatabaseCollection type = GameDatabaseCollection.Unknown) : this(mapper, isPersistent, type)
         {
             this.initMethod = initMethod;
         }
 
-        public ItemCollection(string path, BsonMapper mapper, GameDatabaseCollection type = GameDatabaseCollection.Uknown)
+        public ItemCollection(string path, BsonMapper mapper, GameDatabaseCollection type = GameDatabaseCollection.Unknown)
         {
             this.isPersistent = true;
             this.mapper = mapper;

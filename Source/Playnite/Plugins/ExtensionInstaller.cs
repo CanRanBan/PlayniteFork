@@ -53,7 +53,7 @@ namespace Playnite.Plugins
             PackagePath = packagePath;
         }
 
-        public ExtensionInstallResult(Exception installError,  string packagePath)
+        public ExtensionInstallResult(Exception installError, string packagePath)
         {
             InstallError = installError;
             PackagePath = packagePath;
@@ -151,7 +151,7 @@ namespace Playnite.Plugins
                     }
                     else
                     {
-                        logger.Warn($"Uknown extension file format {queueItem}");
+                        logger.Warn($"Unknown extension file format {queueItem}");
                     }
                 }
                 else if (queueItem.InstallType == ExtInstallType.Uninstall)

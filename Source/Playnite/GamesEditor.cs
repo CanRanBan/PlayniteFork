@@ -270,7 +270,7 @@ namespace Playnite
                 }
                 else
                 {
-                    logger.Error($"Uknown controller found to start a game: {controller.GetType()}");
+                    logger.Error($"Unknown controller found to start a game: {controller.GetType()}");
                 }
 
                 foreach (var item in gameActions.Item1)
@@ -379,7 +379,7 @@ namespace Playnite
                     }
                     else
                     {
-                        throw new NotSupportedException("Uknown play action type.");
+                        throw new NotSupportedException("Unknown play action type.");
                     }
                 }
                 else
@@ -441,7 +441,7 @@ namespace Playnite
                             }
                             else
                             {
-                                controller.Start(action, false,  new SDK.Events.OnGameStartingEventArgs
+                                controller.Start(action, false, new SDK.Events.OnGameStartingEventArgs
                                 {
                                     Game = game,
                                     SourceAction = action

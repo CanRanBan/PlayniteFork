@@ -88,7 +88,7 @@ namespace Playnite.Controllers
             }
             else
             {
-                throw new Exception("Uknown play action configuration.");
+                throw new Exception("Unknown play action configuration.");
             }
 
             emulator = emulator.GetClone();

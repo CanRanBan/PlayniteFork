@@ -157,7 +157,7 @@ namespace Playnite
                 case AddonType.ThemeFullscreen:
                     return PlaynitePaths.PackedThemeFileExtention;
                 default:
-                    throw new Exception($"Uknown addon type {type}");
+                    throw new Exception($"Unknown addon type {type}");
             }
         }
 
@@ -233,7 +233,7 @@ namespace Playnite
                 }
                 else
                 {
-                    throw new Exception($"Uknown installer manifest url format {InstallerManifestUrl}.");
+                    throw new Exception($"Unknown installer manifest url format {InstallerManifestUrl}.");
                 }
             }
             catch (Exception exc) when (!PlayniteEnvironment.ThrowAllErrors)

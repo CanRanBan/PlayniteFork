@@ -101,7 +101,7 @@ namespace Playnite.Toolbox
                 }
             }
 
-            return ItemType.Uknown;
+            return ItemType.Unknown;
         }
 
         public static void ProcessNewOptions(NewCmdLineOptions options)
@@ -130,7 +130,7 @@ namespace Playnite.Toolbox
                         outPath = Extensions.GeneratePluginExtension(ExtensionType.GameLibrary, options.Name, options.OutDirectory.Trim('"'));
                         break;
                     default:
-                        throw new NotSupportedException($"Uknown extension type {options.Type}.");
+                        throw new NotSupportedException($"Unknown extension type {options.Type}.");
                 }
 
                 logger.Info($"Created new {options.Type} in \"{outPath}\"");
@@ -167,7 +167,7 @@ namespace Playnite.Toolbox
                     case ItemType.LibraryPlugin:
                         outPath = Extensions.PackageExtension(options.Directory, options.Destination);
                         break;
-                    case ItemType.Uknown:
+                    case ItemType.Unknown:
                         throw new NotSupportedException();
                 }
 
@@ -193,7 +193,7 @@ namespace Playnite.Toolbox
                     case ItemType.FullscreenTheme:
                         Themes.UpdateTheme(options.Directory, ApplicationMode.Desktop);
                         break;
-                    case ItemType.Uknown:
+                    case ItemType.Unknown:
                     case ItemType.PowerShellScript:
                     case ItemType.GenericPlugin:
                     case ItemType.MetadataPlugin:
@@ -224,7 +224,7 @@ namespace Playnite.Toolbox
                         throw new NotSupportedException();
                 }
             }
-            catch (Exception e) when(!Debugger.IsAttached)
+            catch (Exception e) when (!Debugger.IsAttached)
             {
                 AppResult = 1;
                 logger.Error(e, "Failed to verify manifest." + Environment.NewLine + e.Message);

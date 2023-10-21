@@ -1,6 +1,6 @@
 ///
 /// DO NOT MODIFY! Automatically generated via buildLocConstants.ps1 script.
-/// 
+///
 namespace Playnite
 {
     public static class LOC
@@ -112,7 +112,7 @@ namespace Playnite
         /// <summary>
         /// Unknown extension or a theme caused an unrecoverable error.
         /// </summary>
-        public const string ExtCrashDescriptionUknown = "LOCExtCrashDescriptionUknown";
+        public const string ExtCrashDescriptionUnknown = "LOCExtCrashDescriptionUnknown";
         /// <summary>
         /// Unrecoverable error occurred.
         /// </summary>
@@ -162,7 +162,7 @@ namespace Playnite
         /// </summary>
         public const string GameRemoveAskTitle = "LOCGameRemoveAskTitle";
         /// <summary>
-        /// Cannot remove - Game or installer is running. 
+        /// Cannot remove - Game or installer is running.
         /// </summary>
         public const string GameRemoveRunningError = "LOCGameRemoveRunningError";
         /// <summary>
@@ -3118,7 +3118,7 @@ namespace Playnite
         /// </summary>
         public const string UrlNavigationMessage = "LOCUrlNavigationMessage";
         /// <summary>
-        /// The selected image(s) might be too large for optimal performance. Using very large images can result in worse UI responsiveness and increased memory usage. 
+        /// The selected image(s) might be too large for optimal performance. Using very large images can result in worse UI responsiveness and increased memory usage.
         /// </summary>
         public const string GameImageSizeWarning = "LOCGameImageSizeWarning";
         /// <summary>

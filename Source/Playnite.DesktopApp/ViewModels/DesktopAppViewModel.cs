@@ -1145,7 +1145,7 @@ namespace Playnite.DesktopApp.ViewModels
                     break;
 
                 default:
-                    Logger.Warn($"Uknown URI command {command}");
+                    Logger.Warn($"Unknown URI command {command}");
                     break;
             }
         }

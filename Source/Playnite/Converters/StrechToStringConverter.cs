@@ -29,7 +29,7 @@ namespace Playnite.Converters
                     return ResourceProvider.GetString("LOCStrechUniformToFill");
             }
 
-            return "<UknownStrechMode>";
+            return "<UnknownStrechMode>";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

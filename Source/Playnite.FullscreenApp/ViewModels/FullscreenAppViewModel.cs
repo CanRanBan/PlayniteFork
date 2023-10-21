@@ -996,7 +996,7 @@ namespace Playnite.FullscreenApp.ViewModels
             switch (command)
             {
                 default:
-                    Logger.Warn($"Uknown URI command {command}");
+                    Logger.Warn($"Unknown URI command {command}");
                     break;
             }
         }

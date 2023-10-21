@@ -72,7 +72,7 @@ namespace Playnite.Common
         AMD,
         Nvidia,
         VMware,
-        Uknown
+        Unknown
     }
 
     public static class Computer
@@ -333,7 +333,7 @@ namespace Playnite.Common
                     }
                     else
                     {
-                        return new List<HwCompany> { HwCompany.Uknown };
+                        return new List<HwCompany> { HwCompany.Unknown };
                     }
                 }
 
@@ -347,7 +347,7 @@ namespace Playnite.Common
                 logger.Error(e, "Failed to get GPU vendor.");
             }
 
-            return new List<HwCompany> { HwCompany.Uknown };
+            return new List<HwCompany> { HwCompany.Unknown };
         }
 
         private static string GetMonitorFriendlyName(LUID adapterId, uint targetId)

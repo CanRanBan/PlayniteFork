@@ -9,7 +9,7 @@ namespace Playnite.Toolbox
 {
     public enum ItemType
     {
-        Uknown,
+        Unknown,
         DesktopTheme,
         FullscreenTheme,
         PowerShellScript,
@@ -57,6 +57,6 @@ namespace Playnite.Toolbox
         [Value(0, Required = true, HelpText = "Manifest type.")]
         public ManifestType Type { get; set; }
         [Value(1, Required = true, HelpText = "Full manifest file path.")]
-        public string ManifestPath { get; set;}
+        public string ManifestPath { get; set; }
     }
 }

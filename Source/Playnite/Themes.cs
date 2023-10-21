@@ -94,7 +94,7 @@ namespace Playnite
             if (theme.Id.IsNullOrEmpty())
             {
                 logger.Error($"Theme {theme.Name}, doesn't have ID.");
-                return AddonLoadError.Uknown;
+                return AddonLoadError.Unknown;
             }
 
             var apiVesion = mode == ApplicationMode.Desktop ? DesktopApiVersion : FullscreenApiVersion;
@@ -141,7 +141,7 @@ namespace Playnite
 
             if (!allLoaded)
             {
-                return AddonLoadError.Uknown;
+                return AddonLoadError.Unknown;
             }
 
             try
@@ -213,7 +213,7 @@ namespace Playnite
             catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
             {
                 logger.Error(e, "Failed to load theme's localization files.");
-                return AddonLoadError.Uknown;
+                return AddonLoadError.Unknown;
             }
 
             return AddonLoadError.None;

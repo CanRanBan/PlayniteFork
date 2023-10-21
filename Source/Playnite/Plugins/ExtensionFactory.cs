@@ -58,7 +58,7 @@ namespace Playnite.Plugins
     public enum AddonLoadError
     {
         None,
-        Uknown,
+        Unknown,
         SDKVersion
     }
 
@@ -91,10 +91,10 @@ namespace Playnite.Plugins
             get => Plugins.Where(a => a.Value.Description.Type == ExtensionType.GenericPlugin).Select(a => (GenericPlugin)a.Value.Plugin).ToList();
         }
 
-        public  List<PlayniteScript> Scripts
+        public List<PlayniteScript> Scripts
         {
             get; private set;
-        } =  new List<PlayniteScript>();
+        } = new List<PlayniteScript>();
 
         public ExtensionFactory(IGameDatabase database, GameControllerFactory controllers, Func<ExtensionManifest, IPlayniteAPI> apiGenerator)
         {
@@ -344,7 +344,7 @@ namespace Playnite.Plugins
                 if (!File.Exists(scriptPath))
                 {
                     logger.Error($"Cannot load script extension, {scriptPath} not found.");
-                    FailedExtensions.Add((desc, AddonLoadError.Uknown));
+                    FailedExtensions.Add((desc, AddonLoadError.Unknown));
                     continue;
                 }
 
@@ -353,7 +353,7 @@ namespace Playnite.Plugins
                     script = PlayniteScript.FromFile(scriptPath, $"{desc.DirectoryName}#PS");
                     if (script == null)
                     {
-                        FailedExtensions.Add((desc, AddonLoadError.Uknown));
+                        FailedExtensions.Add((desc, AddonLoadError.Unknown));
                         continue;
                     }
 
@@ -371,7 +371,7 @@ namespace Playnite.Plugins
                 {
                     allSuccess = false;
                     logger.Error(e, $"Failed to load script file {scriptPath}");
-                    FailedExtensions.Add((desc, AddonLoadError.Uknown));
+                    FailedExtensions.Add((desc, AddonLoadError.Unknown));
                     continue;
                 }
 
@@ -436,7 +436,7 @@ namespace Playnite.Plugins
                         }
                     }
 
-                    FailedExtensions.Add((desc, AddonLoadError.Uknown));
+                    FailedExtensions.Add((desc, AddonLoadError.Unknown));
                 }
             }
         }

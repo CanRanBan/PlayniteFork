@@ -29,7 +29,7 @@ namespace Playnite.Converters
                     return ResourceProvider.GetString("LOCDockBottom");
             }
 
-            return "<UknownDockMode>";
+            return "<UnknownDockMode>";
         }
 
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

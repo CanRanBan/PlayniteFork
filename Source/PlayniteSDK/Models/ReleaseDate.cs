@@ -266,7 +266,7 @@ namespace Playnite.SDK.Models
             }
             else
             {
-                throw new NotSupportedException("Uknown ReleaseDate string format.");
+                throw new NotSupportedException("Unknown ReleaseDate string format.");
             }
         }
 

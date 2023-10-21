@@ -43,7 +43,7 @@ Wir empfehlen, die Diagnosedatei zu speichern und das Problem dem Entwickler der
     <sys:String x:Key="LOCExtCrashDescriptionFS" xml:space="preserve">Erweiterung »{0}« hat einen nicht behebbaren Fehler verursacht.
 
 Wir empfehlen, das Problem dem Entwickler der Erweiterung zu melden. Falls das Problem wiederholt auftritt, deaktiviere die Erweiterung.</sys:String>
-    <sys:String x:Key="LOCExtCrashDescriptionUknown" xml:space="preserve">Unbekannte Erweiterung oder Design verursachte einen nicht behebbaren Fehler.
+    <sys:String x:Key="LOCExtCrashDescriptionUnknown" xml:space="preserve">Unbekannte Erweiterung oder Design verursachte einen nicht behebbaren Fehler.
 
 Wir empfehlen alle Drittanbieter-Add-ons zu deaktivieren, um das problematische zu isolieren und das Problem dem Entwickler des Add-ons mitzuteilen.</sys:String>
     <sys:String x:Key="LOCCrashDescriptionFullscreen" xml:space="preserve">Ein nicht behebbarer Fehler ist aufgetreten.

@@ -136,7 +136,7 @@ namespace Playnite.ViewModels
             if (exInfo.CrashExtension == null)
             {
                 ShowDisableCheck = false;
-                ExtCrashDescription = resources.GetString(LOC.ExtCrashDescriptionUknown);
+                ExtCrashDescription = resources.GetString(LOC.ExtCrashDescriptionUnknown);
             }
             else
             {
