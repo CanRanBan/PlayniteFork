@@ -138,11 +138,11 @@
   <ItemGroup>
     <Reference Include="HtmlRenderer, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\HtmlRenderer.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer.WPF, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\HtmlRenderer.WPF.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -467,10 +467,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="..\..\references\Fonts\icofont.ttf">
+    <Resource Include="..\..\Include\Fonts\icofont.ttf">
       <Link>Fonts\icofont.ttf</Link>
     </Resource>
-    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+    <None Include="..\Playnite.Toolbox\NLog.config">
       <Link>NLog.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

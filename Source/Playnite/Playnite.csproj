@@ -129,22 +129,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DiscordRPC">
-      <HintPath>..\..\references\DiscordRPC.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\DiscordRPC.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer">
-      <HintPath>..\..\references\HtmlRenderer.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer.WPF">
-      <HintPath>..\..\references\HtmlRenderer.WPF.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SharpCompress, Version=0.26.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\SharpCompress.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\SharpCompress.dll</HintPath>
     </Reference>
     <Reference Include="SQLNado">
-      <HintPath>..\..\references\SQLNado.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\SQLNado.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -175,7 +175,7 @@
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="XInputDotNetPure">
-      <HintPath>..\..\references\XInputDotNetPure.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\XInputDotNetPure.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -504,7 +504,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+    <None Include="..\Playnite.Toolbox\NLog.config">
       <Link>NLog.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -557,17 +557,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ContentWithTargetPath Include="..\..\references\XInputInterface.dll">
+    <ContentWithTargetPath Include="..\..\Include\Libraries\XInputInterface.dll">
       <Link>Dependencies\XInputInterface.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>XInputInterface.dll</TargetPath>
     </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\references\msvcr110.dll">
+    <ContentWithTargetPath Include="..\..\Include\Libraries\msvcr110.dll">
       <Link>Dependencies\msvcr110.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>msvcr110.dll</TargetPath>
     </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\references\sqlite3.x86.dll">
+    <ContentWithTargetPath Include="..\..\Include\Libraries\sqlite3.x86.dll">
       <Link>Dependencies\sqlite3.x86.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>sqlite3.x86.dll</TargetPath>

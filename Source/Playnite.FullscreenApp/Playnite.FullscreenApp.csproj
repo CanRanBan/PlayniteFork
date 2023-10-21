@@ -138,11 +138,11 @@
   <ItemGroup>
     <Reference Include="HtmlRenderer, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\HtmlRenderer.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer.WPF, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\HtmlRenderer.WPF.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -272,7 +272,7 @@
     </Compile>
     <Compile Include="Windows\WindowTools.cs" />
     <SplashScreen Include="SplashScreen.png" />
-    <Resource Include="..\..\references\Fonts\*.*">
+    <Resource Include="..\..\Include\Fonts\*.*">
       <Link>Fonts\%(Filename)%(Extension)</Link>
     </Resource>
     <None Include="..\Playnite\LICENSE.txt">
@@ -282,7 +282,7 @@
     <Content Include="Themes\Fullscreen\Default\audio\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\Tools\Playnite.Toolbox\NLog.config">
+    <None Include="..\Playnite.Toolbox\NLog.config">
       <Link>NLog.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
