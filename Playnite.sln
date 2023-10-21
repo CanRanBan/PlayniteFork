@@ -13,11 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite.FullscreenApp", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite.Toolbox", "Source\Playnite.Toolbox\Playnite.Toolbox.csproj", "{9C73C47E-64C2-4691-A602-A8463185E232}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE72013F-EC27-4857-A66B-20A2862F7446}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{035EF581-34EE-40ED-8BE9-F1A50B393E41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Development", "Development", "{BC6C934B-5E82-4D4B-B075-F15CAE9D13BF}"
