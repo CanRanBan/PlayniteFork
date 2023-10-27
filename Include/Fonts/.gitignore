@@ -1,0 +1,6 @@
+### Project specific ignores
+## See .gitignore of Original branch
+
+# Fonts not included in project archive
+PlayStation*.ttf
+Xbox*.ttf
