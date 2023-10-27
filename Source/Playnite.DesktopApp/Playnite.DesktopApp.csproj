@@ -490,7 +490,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PlayniteSDK\Playnite.SDK.csproj">
+    <ProjectReference Include="..\Playnite.SDK\Playnite.SDK.csproj">
       <Project>{19bc9097-5705-4352-90e2-99f0c63230d0}</Project>
       <Name>Playnite.SDK</Name>
     </ProjectReference>

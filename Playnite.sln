@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite", "Source\Playnite\Playnite.csproj", "{AD271E73-8A13-4C4E-BFDC-3076646B59E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite.SDK", "Source\PlayniteSDK\Playnite.SDK.csproj", "{19BC9097-5705-4352-90E2-99F0C63230D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite.SDK", "Source\Playnite.SDK\Playnite.SDK.csproj", "{19BC9097-5705-4352-90E2-99F0C63230D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playnite.DesktopApp", "Source\Playnite.DesktopApp\Playnite.DesktopApp.csproj", "{26DCC539-E67F-4CB5-970F-F02C1F5C6E00}"
 EndProject
