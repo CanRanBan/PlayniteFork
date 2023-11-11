@@ -277,7 +277,7 @@
     </Resource>
     <None Include="..\Playnite\LICENSE.txt">
       <Link>LICENSE.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Themes\Fullscreen\Default\audio\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

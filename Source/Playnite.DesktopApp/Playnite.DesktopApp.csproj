@@ -504,7 +504,7 @@
     <SplashScreen Include="SplashScreen.png" />
     <None Include="..\Playnite\LICENSE.txt">
       <Link>LICENSE.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Themes\Desktop\Default\Constants.xaml">
       <Generator>MSBuild:Compile</Generator>
