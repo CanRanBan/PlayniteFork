@@ -233,7 +233,6 @@ namespace System.Drawing.Imaging
                     {
                         var settings = new ProcessImageSettings
                         {
-                            SaveFormat = FileFormat.Bmp,
                             Sharpen = false
                         };
 
