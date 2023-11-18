@@ -645,7 +645,7 @@
       <Version>3.2.26</Version>
     </PackageReference>
     <PackageReference Include="System.IO.Abstractions">
-      <Version>19.2.69</Version>
+      <Version>19.2.87</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.2</Version>
