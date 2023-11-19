@@ -39,3 +39,7 @@ System.Memory.dll
 System.Numerics.Vectors.dll
 System.Runtime.CompilerServices.Unsafe.dll
 System.Text.Encoding.CodePages.dll
+protobuf-net.dll
+protobuf-net.pdb
+Microsoft.Xaml.Behaviors.dll
+Microsoft.Xaml.Behaviors.pdb
