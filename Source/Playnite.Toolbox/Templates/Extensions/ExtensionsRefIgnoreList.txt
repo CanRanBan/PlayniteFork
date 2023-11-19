@@ -34,3 +34,8 @@ HtmlRenderer.dll
 HtmlRenderer.xml
 HtmlRenderer.WPF.dll
 HtmlRenderer.WPF.xml
+System.Buffers.dll
+System.Memory.dll
+System.Numerics.Vectors.dll
+System.Runtime.CompilerServices.Unsafe.dll
+System.Text.Encoding.CodePages.dll
