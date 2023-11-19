@@ -40,6 +40,8 @@ System.Numerics.Vectors.dll
 System.Runtime.CompilerServices.Unsafe.dll
 System.Text.Encoding.CodePages.dll
 protobuf-net.dll
+protobuf-net.Core.dll
 protobuf-net.pdb
 Microsoft.Xaml.Behaviors.dll
 Microsoft.Xaml.Behaviors.pdb
+System.Collections.Immutable.dll
