@@ -45,3 +45,5 @@ protobuf-net.pdb
 Microsoft.Xaml.Behaviors.dll
 Microsoft.Xaml.Behaviors.pdb
 System.Collections.Immutable.dll
+TestableIO.System.IO.Abstractions.dll
+TestableIO.System.IO.Abstractions.Wrappers.dll
