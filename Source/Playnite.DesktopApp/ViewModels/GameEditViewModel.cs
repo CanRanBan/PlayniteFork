@@ -84,6 +84,7 @@ namespace Playnite.DesktopApp.ViewModels
         private ExtensionFactory extensions;
         private PlayniteSettings appSettings;
         private bool ignoreClosingEvent = false;
+        private readonly MultiEditGame originalMultiGameObj;
 
         public string IconMetadata
         {
@@ -309,6 +310,7 @@ namespace Playnite.DesktopApp.ViewModels
             IsSingleGameEdit = false;
             IsMultiGameEdit = true;
             EditingGame = GameTools.GetMultiGameEditObject(Games);
+            originalMultiGameObj = EditingGame.GetClone<Game, MultiEditGame>();
             ShowCheckBoxes = true;
             ShowMetaDownload = false;
             Init(database, window, dialogs, resources, extensions, appSettings, EditingGame as MultiEditGame);
@@ -475,7 +477,8 @@ namespace Playnite.DesktopApp.ViewModels
 
         private MessageBoxResult CheckUnsavedChanges()
         {
-            if (!EditingGame.IsEqualJson(Game))
+            var compareObj = IsMultiGameEdit ? originalMultiGameObj : Game;
+            if (!EditingGame.IsEqualJson(compareObj))
             {
                 return dialogs.ShowMessage(LOC.UnsavedChangesAskMessage, "", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
             }
@@ -970,31 +973,6 @@ namespace Playnite.DesktopApp.ViewModels
             {
                 logger.Error(e, "Failed to cleanup temporary files.");
             }
-        }
-
-        public void UseExeIcon()
-        {
-            var playAction = EditingGame.GameActions?.FirstOrDefault(a => a.IsPlayAction && a.Type == GameActionType.File);
-            if (playAction == null)
-            {
-                dialogs.ShowErrorMessage(LOC.ExecIconMissingPlayAction, "");
-                return;
-            }
-
-            var path = EditingGame.GetRawExecutablePath();
-            if (string.IsNullOrEmpty(path) || !File.Exists(path))
-            {
-                logger.Error($"Can't find executable for icon extraction, file {path}");
-                return;
-            }
-
-            var icon = ProcessMetadataFile(path, tempEditingIconFileName);
-            if (string.IsNullOrEmpty(icon))
-            {
-                return;
-            }
-
-            EditingGame.Icon = icon;
         }
 
         public string GetDroppedImage(DragEventArgs args, List<string> compatibleExtensions)

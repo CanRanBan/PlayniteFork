@@ -950,7 +950,7 @@ namespace Playnite.ViewModels
         }
 
         public abstract void OpenSettings(int settingsPageIndex);
-        public void StartGame(Game game)
+        public void StartGame(Game game, bool launchedFromUI)
         {
             if (game.IsLaunching || game.IsRunning)
             {
@@ -960,12 +960,12 @@ namespace Playnite.ViewModels
                     MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     App.GamesEditor.CancelGameMonitoring(game);
-                    App.GamesEditor.PlayGame(game);
+                    App.GamesEditor.PlayGame(game, launchedFromUI);
                 }
             }
             else
             {
-                App.GamesEditor.PlayGame(game);
+                App.GamesEditor.PlayGame(game, launchedFromUI);
             }
         }
 
@@ -981,10 +981,33 @@ namespace Playnite.ViewModels
         {
             try
             {
-                ProcessStarter.StartProcess(
-                    PlaynitePaths.ExpandVariables(app.Path, fixSeparators: true),
-                    PlaynitePaths.ExpandVariables(app.Arguments),
-                    PlaynitePaths.ExpandVariables(app.WorkingDir, fixSeparators: true));
+                if (app.AppType == AppSoftwareType.Standard)
+                {
+                    ProcessStarter.StartProcess(
+                        PlaynitePaths.ExpandVariables(app.Path, fixSeparators: true),
+                        PlaynitePaths.ExpandVariables(app.Arguments),
+                        PlaynitePaths.ExpandVariables(app.WorkingDir, fixSeparators: true));
+                }
+                else
+                {
+                    using (var runtime = new PowerShellRuntime($"Software tool {app.Name} runtime"))
+                    {
+                        var scriptVars = new Dictionary<string, object>
+                        {
+                            ["PlayniteApi"] = App.PlayniteApiGlobal
+                        };
+
+                        runtime.Execute(PlaynitePaths.ExpandVariables(app.Script), variables: scriptVars);
+                    }
+                }
+            }
+            catch (ScriptRuntimeException e) when (!PlayniteEnvironment.ThrowAllErrors)
+            {
+                Logger.Error(e, "Failed to start app script.");
+                var message = e.Message + Environment.NewLine + Environment.NewLine + e.ScriptStackTrace;
+                Dialogs.ShowErrorMessage(
+                    message,
+                    "LOCScriptError");
             }
             catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
             {

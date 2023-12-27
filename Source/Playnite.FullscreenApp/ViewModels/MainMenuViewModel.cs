@@ -28,6 +28,8 @@ namespace Playnite.FullscreenApp.ViewModels
         public RelayCommand HibernateSystemCommand => new RelayCommand(() => HibernateSystem());
         public RelayCommand SleepSystemCommand => new RelayCommand(() => SleepSystem());
         public RelayCommand RestartSystemCommand => new RelayCommand(() => RestartSystem());
+        public RelayCommand LockSystemCommand => new RelayCommand(() => LockSystem());
+        public RelayCommand LogoutUserCommand => new RelayCommand(() => LogoutUser());
         public RelayCommand UpdateGamesCommand => new RelayCommand(async () =>
         {
             Close();
@@ -90,7 +92,7 @@ namespace Playnite.FullscreenApp.ViewModels
             if (model.SelectedAction == RandomGameSelectAction.Play)
             {
                 MainModel.SelectGame(model.SelectedGame.Id);
-                MainModel.GamesEditor.PlayGame(model.SelectedGame);
+                MainModel.GamesEditor.PlayGame(model.SelectedGame, true);
             }
             else if (model.SelectedAction == RandomGameSelectAction.Navigate)
             {
@@ -195,6 +197,49 @@ namespace Playnite.FullscreenApp.ViewModels
                 try
                 {
                     Computer.Restart();
+                }
+                catch (Exception e)
+                {
+                    Dialogs.ShowErrorMessage(e.Message, "");
+                }
+            }
+        }
+
+        public void LockSystem()
+        {
+            Close();
+            if (Dialogs.ShowMessage(LOC.ConfirumationAskGeneric, LOC.MenuLockSystem, MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+            {
+                return;
+            }
+
+            if (!PlayniteEnvironment.IsDebuggerAttached)
+            {
+                try
+                {
+                    Computer.Lock();
+                }
+                catch (Exception e)
+                {
+                    Dialogs.ShowErrorMessage(e.Message, "");
+                }
+            }
+        }
+
+        public void LogoutUser()
+        {
+            Close();
+            if (Dialogs.ShowMessage(LOC.ConfirumationAskGeneric, LOC.MenuLogoutUser, MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+            {
+                return;
+            }
+
+            if (!PlayniteEnvironment.IsDebuggerAttached)
+            {
+                try
+                {
+                    Computer.Logout();
+                    Shutdown();
                 }
                 catch (Exception e)
                 {

@@ -77,15 +77,24 @@ namespace Playnite
 
     public enum AfterLaunchOptions
     {
+        [Description(LOC.DoNothing)]
         None,
+        [Description(LOC.Minimize)]
         Minimize,
+        [Description(LOC.Close)]
         Close
     }
 
     public enum AfterGameCloseOptions
     {
+        [Description(LOC.DoNothing)]
         None,
-        Restore
+        [Description(LOC.RestoreWindow)]
+        Restore,
+        [Description(LOC.RestoreWindowOnlyFromUI)]
+        RestoreOnlyFromUI,
+        [Description(LOC.ExitPlaynite)]
+        Exit
     }
 
     public enum ApplicationView
@@ -175,7 +184,9 @@ namespace Playnite
         [Description(LOC.OptionOnceADay)]
         OnceADay = 1,
         [Description(LOC.OptionOnceAWeek)]
-        OnceAWeek = 2
+        OnceAWeek = 2,
+        [Description(LOC.OptionOnlyManually)]
+        Manually = 3
     }
 
     public enum LibraryUpdateCheckFrequency
@@ -1094,7 +1105,7 @@ namespace Playnite
             }
         }
 
-        private AfterGameCloseOptions afterGameClose = AfterGameCloseOptions.Restore;
+        private AfterGameCloseOptions afterGameClose = AfterGameCloseOptions.RestoreOnlyFromUI;
         public AfterGameCloseOptions AfterGameClose
         {
             get
@@ -2213,6 +2224,8 @@ namespace Playnite
         private SafeSearchSettings webImageSafeSearch = SafeSearchSettings.Default;
         public SafeSearchSettings WebImageSafeSearch { get => webImageSafeSearch; set => SetValue(ref webImageSafeSearch, value); }
 
+        public Guid LastSelectedGame { get; set; }
+
         [JsonIgnore]
         public static bool IsPortable
         {
@@ -2631,6 +2644,8 @@ namespace Playnite
         {
             switch (CheckForProgramUpdates)
             {
+                case UpdateCheckFrequency.Manually:
+                    return false;
                 case UpdateCheckFrequency.OnceADay:
                     return DateTimes.Now.Date != LastProgramUpdateCheck.Date;
                 case UpdateCheckFrequency.OnceAWeek:
@@ -2645,6 +2660,8 @@ namespace Playnite
         {
             switch (CheckForAddonUpdates)
             {
+                case UpdateCheckFrequency.Manually:
+                    return false;
                 case UpdateCheckFrequency.OnceADay:
                     return DateTimes.Now.Date != LastAddonUpdateCheck.Date;
                 case UpdateCheckFrequency.OnceAWeek:
@@ -2659,6 +2676,8 @@ namespace Playnite
         {
             switch (CheckForProgramUpdates)
             {
+                case UpdateCheckFrequency.Manually:
+                    return false;
                 case UpdateCheckFrequency.OnceADay:
                     return DateTimes.Now.Date != LastProgramUpdateCheck.Date;
                 case UpdateCheckFrequency.OnceAWeek:
@@ -2673,6 +2692,8 @@ namespace Playnite
         {
             switch (CheckForAddonUpdates)
             {
+                case UpdateCheckFrequency.Manually:
+                    return false;
                 case UpdateCheckFrequency.OnceADay:
                     return DateTimes.Now.Date != LastAddonUpdateCheck.Date;
                 case UpdateCheckFrequency.OnceAWeek:

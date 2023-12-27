@@ -254,11 +254,14 @@ Selecting "add to exclusion list" option will prevent games from being imported 
     <sys:String x:Key="LOCMenuLinksTitle">Links</sys:String>
     <sys:String x:Key="LOCMenuHelpTitle">Help</sys:String>
     <sys:String x:Key="LOCMenuPatreonSupport">Support on Patreon</sys:String>
+    <sys:String x:Key="LOCUserManual">User manual</sys:String>
     <sys:String x:Key="LOCSDKDocumentation">SDK Documentation</sys:String>
     <sys:String x:Key="LOCMenuRestartSystem">Restart System</sys:String>
     <sys:String x:Key="LOCMenuShutdownSystem">Turn Off System</sys:String>
     <sys:String x:Key="LOCMenuSuspendSystem">Suspend System</sys:String>
     <sys:String x:Key="LOCMenuHibernateSystem">Hibernate System</sys:String>
+    <sys:String x:Key="LOCMenuLockSystem">Lock System</sys:String>
+    <sys:String x:Key="LOCMenuLogoutUser">Log Out User</sys:String>
     <sys:String x:Key="LOCMenuSelectRandomGame">Pick a Random Game</sys:String>
     <!--Settings Window-->
     <sys:String x:Key="LOCSettingsDetailsPanelItems">Game fields to be displayed on details panel:</sys:String>
@@ -605,11 +608,9 @@ Please attach the following ID to your issue report:</sys:String>
 
 More information at https://playnite.link/cefstartup</sys:String>
     <sys:String x:Key="LOCEmulatorImportNoDefinitionsError">Cannot import emulators due to missing or corrupted definition file.</sys:String>
-    <sys:String x:Key="LOCXInputInitErrorMessage">Failed to initialize XInput interface.</sys:String>
     <sys:String x:Key="LOCMenuActionExecError">Failed to execute menu action.</sys:String>
     <!--GameEdit-->
     <sys:String x:Key="LOCGameEditWindowTitle">Edit Game Details</sys:String>
-    <sys:String x:Key="LOCUseExeIcon">From Play action</sys:String>
     <sys:String x:Key="LOCImageURL">Image URL</sys:String>
     <sys:String x:Key="LOCAddLinkButton">Add Link</sys:String>
     <sys:String x:Key="LOCAddRom">Add ROM</sys:String>
@@ -647,6 +648,7 @@ More information at https://playnite.link/cefstartup</sys:String>
     <sys:String x:Key="LOCDoNothing">Do nothing</sys:String>
     <sys:String x:Key="LOCMinimize">Minimize</sys:String>
     <sys:String x:Key="LOCRestoreWindow">Restore window</sys:String>
+    <sys:String x:Key="LOCRestoreWindowOnlyFromUI">Restore window only when launched from UI</sys:String>
     <sys:String x:Key="LOCClose">Close</sys:String>
     <sys:String x:Key="LOCChange">Change</sys:String>
     <sys:String x:Key="LOCAdvanced">Advanced</sys:String>
@@ -959,6 +961,8 @@ If you want to install or uninstall additional integrations, use "Add-ons" optio
     <sys:String x:Key="LOCSelectActionTitle">Select action</sys:String>
     <sys:String x:Key="LOCActionTrackingMode">Tracking Mode</sys:String>
     <sys:String x:Key="LOCActionTrackingPath">Tracking Path</sys:String>
+    <sys:String x:Key="LOCActionTrackingTrackingDelay">Initial tracking delay</sys:String>
+    <sys:String x:Key="LOCActionTrackingFrequency">Tracking frequency</sys:String>
     <sys:String x:Key="LOCGameActionTypeLink">Link</sys:String>
     <sys:String x:Key="LOCGameActionTypeFile">File</sys:String>
     <sys:String x:Key="LOCGameActionTypeEmulator">Emulator</sys:String>
@@ -1004,10 +1008,10 @@ If you want to install or uninstall additional integrations, use "Add-ons" optio
 Disabling this can lead to issues with games not getting input focus on startup!</sys:String>
     <sys:String x:Key="LOCSettingsFontSize">Font Size</sys:String>
     <sys:String x:Key="LOCSettingsFontSizeSmall">Font Size Small</sys:String>
-    <sys:String x:Key="LOCSettingsXInputProcessing">XInput Device Support</sys:String>
-    <sys:String x:Key="LOCSettingsXInputProcessingDescription" xml:space="preserve">If disabled, Playnite won't accept any XInput interface inputs.
+    <sys:String x:Key="LOCSettingsXInputProcessing">Game controller support</sys:String>
+    <sys:String x:Key="LOCSettingsXInputProcessingDescription" xml:space="preserve">If disabled, Playnite won't accept any game controller inputs.
 
-Disable if you use tools that translate XInput inputs to mouse/keyboards inputs and you are getting double inputs in Playnite.</sys:String>
+Disable if you use tools that translates game controller inputs to mouse/keyboards inputs and you are getting double inputs in Playnite.</sys:String>
     <sys:String x:Key="LOCSettingsShowItemsMainMenuHeader">Show items on main menu:</sys:String>
     <sys:String x:Key="LOCSettingsSwapMainViewXAButtons">Inverted X/A main view button binding</sys:String>
     <sys:String x:Key="LOCSettingsSwapMainViewXAButtonsDescriptions">Swaps button bindings for starting a game and showing game details page on main view.</sys:String>
@@ -1251,4 +1255,6 @@ The specified date format will be used for all other dates.</sys:String>
 
 Open new issue on Playnite's GitHub page with a request to fix corruption in your files.</sys:String>
     <sys:String x:Key="LOCUnsavedChangesAskMessage">Do you want to save changes you made?</sys:String>
+    <sys:String x:Key="LOCPortableInstallation">Portable installation</sys:String>
+    <sys:String x:Key="LOCNoControllersDetected">No controllers detected</sys:String>
 </ResourceDictionary>

@@ -447,7 +447,9 @@ namespace Playnite.Controllers
                 Path = controller.Path,
                 WorkingDir = controller.WorkingDir,
                 TrackingMode = controller.TrackingMode,
-                TrackingPath = controller.TrackingPath
+                TrackingPath = controller.TrackingPath,
+                InitialTrackingDelay = controller.InitialTrackingDelay,
+                TrackingFrequency = controller.TrackingFrequency
             };
 
             Start(action, true, new OnGameStartingEventArgs
@@ -604,7 +606,7 @@ namespace Playnite.Controllers
                     if (!watchDir.IsNullOrEmpty() && FileSystem.DirectoryExists(watchDir))
                     {
                         stopWatch = Stopwatch.StartNew();
-                        _ = procMon.WatchDirectoryProcesses(watchDir, false);
+                        _ = procMon.WatchDirectoryProcesses(watchDir, false, false, action.TrackingFrequency, action.InitialTrackingDelay);
                     }
                     else
                     {

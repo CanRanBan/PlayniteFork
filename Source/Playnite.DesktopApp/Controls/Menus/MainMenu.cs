@@ -185,11 +185,10 @@ namespace Playnite.DesktopApp.Controls
             var linksItem = AddMenuChild(Items, "LOCMenuLinksTitle", null);
             AddMenuChild(linksItem.Items, "Discord", GlobalCommands.NavigateUrlCommand, UrlConstants.Discord, "Images/discord.png");
             AddMenuChild(linksItem.Items, "Reddit", GlobalCommands.NavigateUrlCommand, UrlConstants.Reddit, "Images/reddit.png");
-            AddMenuChild(linksItem.Items, "Twitter", GlobalCommands.NavigateUrlCommand, UrlConstants.Twitter, "Images/twitter.png");
 
             // Help
             var helpItem = AddMenuChild(Items, "LOCMenuHelpTitle", null);
-            AddMenuChild(helpItem.Items, "LOCOpenGameManual", GlobalCommands.NavigateUrlCommand, UrlConstants.SdkDocs);
+            AddMenuChild(helpItem.Items, "LOCUserManual", GlobalCommands.NavigateUrlCommand, UrlConstants.SdkDocs);
             AddMenuChild(helpItem.Items, "LOCMenuIssues", mainModel.ReportIssueCommand);
             AddMenuChild(helpItem.Items, "LOCSDKDocumentation", GlobalCommands.NavigateUrlCommand, UrlConstants.SdkDocs);
             helpItem.Items.Add(new Separator());

@@ -167,6 +167,7 @@
     </ApplicationDefinition>
     <Compile Include="Api\MainViewAPI.cs" />
     <Compile Include="Commands\GlobalCommands.cs" />
+    <Compile Include="Controls\SettingsSections\SettingsSectionControl.cs" />
     <Compile Include="Controls\ToggleButtonEx.cs" />
     <Compile Include="Controls\FilterPresetSelector.cs" />
     <Compile Include="Controls\GameListItem.cs" />
@@ -631,9 +632,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
       <Version>1.1.77</Version>
-    </PackageReference>
-    <PackageReference Include="NAudio">
-      <Version>1.10.0</Version>
     </PackageReference>
     <PackageReference Include="Prism.Wpf">
       <Version>6.3.0</Version>
