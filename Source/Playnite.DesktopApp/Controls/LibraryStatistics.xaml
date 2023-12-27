@@ -1,24 +1,25 @@
 ﻿<UserControl x:Class="Playnite.DesktopApp.Controls.LibraryStatistics"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:p="clr-namespace:Playnite;assembly=Playnite"
              xmlns:pmrk="clr-namespace:Playnite.DesktopApp.Markup"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             mc:Ignorable="d" 
+             xmlns:viewModels="clr-namespace:Playnite.DesktopApp.ViewModels"
+             mc:Ignorable="d"
              d:DesignHeight="650" d:DesignWidth="900"
-             d:DataContext="{x:Static StatisticsViewModel.DesignIntance}">
+             d:DataContext="{x:Static viewModels:StatisticsViewModel.DesignIntance}">
 
     <UserControl.Resources>
         <p:BindingProxy x:Key="DCProxy" Data="{Binding}" />
-        
+
         <ControlTemplate x:Key="OverallStatsTemplate">
             <ControlTemplate.Resources>
                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
             </ControlTemplate.Resources>
             <GroupBox Header="{DynamicResource LOCOverviewLabel}" Margin="10" MaxHeight="330">
-                <GridEx GridEx.AutoLayoutColumns="3" GridEx.ColumnCount="3" GridEx.RowCount="21"                        
+                <GridEx GridEx.AutoLayoutColumns="3" GridEx.ColumnCount="3" GridEx.RowCount="21"
                         GridEx.StarColumns="0" MinWidth="220" Margin="10">
                     <TextBlock Text="{DynamicResource LOCAll}" Margin="0,3,15,3" />
                     <TextBlock Text="{Binding TotalCount}" Margin="0,3,0,3" TextAlignment="Right" />
@@ -74,7 +75,7 @@
                                 <TextBlock Margin="0,3,0,3" ToolTip="{Binding Name}">
                                     <Hyperlink Command="{Binding Data.NavigateToGameCommand, Source={StaticResource DCProxy}}"
                                                CommandParameter="{Binding Game}">
-                                        <TextBlock Text="{Binding Name}" Margin="0,0,15,0"                                                   
+                                        <TextBlock Text="{Binding Name}" Margin="0,0,15,0"
                                                    TextTrimming="CharacterEllipsis" />
                                     </Hyperlink>
                                 </TextBlock>
@@ -97,7 +98,7 @@
                 <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}" />
             </ControlTemplate.Resources>
             <GroupBox Header="{DynamicResource LOCCompletionStatus}" Margin="10" MaxHeight="330" >
-                <ItemsControl ItemsSource="{Binding CompletionStates}"                                      
+                <ItemsControl ItemsSource="{Binding CompletionStates}"
                               Width="250" Margin="10">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
