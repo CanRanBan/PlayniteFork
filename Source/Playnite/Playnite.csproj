@@ -592,10 +592,10 @@
       <Version>1.0.7</Version>
     </PackageReference>
     <PackageReference Include="CefSharp.OffScreen">
-      <Version>119.4.30</Version>
+      <Version>120.1.110</Version>
     </PackageReference>
     <PackageReference Include="CefSharp.Wpf">
-      <Version>119.4.30</Version>
+      <Version>120.1.110</Version>
     </PackageReference>
     <PackageReference Include="CommandLineParser">
       <Version>2.9.1</Version>
