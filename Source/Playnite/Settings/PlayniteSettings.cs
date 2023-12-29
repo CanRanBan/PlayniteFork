@@ -2616,7 +2616,7 @@ namespace Playnite
 
         private Thickness GetItemSpacingMargin()
         {
-            return new Thickness(GridItemSpacing / 2, GridItemSpacing / 2, GridItemSpacing / 2, GridItemSpacing / 2);;
+            return new Thickness(GridItemSpacing / 2, GridItemSpacing / 2, GridItemSpacing / 2, GridItemSpacing / 2);
         }
 
         private Thickness GetFullscreenItemSpacingMargin()
