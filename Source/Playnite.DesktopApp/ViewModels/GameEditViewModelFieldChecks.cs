@@ -1200,7 +1200,7 @@ namespace Playnite.DesktopApp.ViewModels
                     {
                         UseCommunityScoreChanges = true;
                     }
-                    break; ;
+                    break;
                 case nameof(Game.Favorite):
                     if (IsSingleGameEdit)
                     {
@@ -1210,7 +1210,7 @@ namespace Playnite.DesktopApp.ViewModels
                     {
                         UseFavoriteChanges = true;
                     }
-                    break; ;
+                    break;
                 case nameof(Game.Hidden):
                     if (IsSingleGameEdit)
                     {
