@@ -64,7 +64,6 @@ namespace Playnite.API
         public bool StartMinimized => settings.StartMinimized;
         public bool StartOnBoot => settings.StartOnBoot;
         public string FontFamilyName => settings.FontFamilyName;
-        public bool DiscordPresenceEnabled => settings.DiscordPresenceEnabled;
         public AgeRatingOrg AgeRatingOrgPriority => settings.AgeRatingOrgPriority;
         public bool SidebarVisible => settings.ShowSidebar;
         public Dock SidebarPosition => settings.SidebarPosition;

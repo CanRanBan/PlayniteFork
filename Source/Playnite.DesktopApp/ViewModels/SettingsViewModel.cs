@@ -566,11 +566,6 @@ namespace Playnite.DesktopApp.ViewModels
                 }
             }
 
-            if (editedFields.Contains(nameof(Settings.DiscordPresenceEnabled)) && application.Discord != null)
-            {
-                application.Discord.IsPresenceEnabled = Settings.DiscordPresenceEnabled;
-            }
-
             if (editedFields.Contains(nameof(Settings.TraceLogEnabled)))
             {
                 NLogLogger.IsTraceEnabled = Settings.TraceLogEnabled;

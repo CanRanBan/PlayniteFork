@@ -1297,11 +1297,6 @@ namespace Playnite
                 RunningGames.Remove(game.Id);
                 Extensions.InvokeOnGameStopped(game, ellapsedTime, true);
             }
-
-            if (AppSettings.DiscordPresenceEnabled)
-            {
-                Application.Discord?.ClearPresence();
-            }
         }
 
         private void UpdateGameState(Guid id, bool? installed, bool? running, bool? installing, bool? uninstalling, bool? launching)
@@ -1403,11 +1398,6 @@ namespace Playnite
 
                 PlayniteApplication.Current.IsActive = false;
             }
-
-            if (AppSettings.DiscordPresenceEnabled)
-            {
-                Application.Discord?.SetPresence(game.Name);
-            }
         }
 
         private void Controllers_Stopped(object sender, GameStoppedEventArgs args)
@@ -1447,11 +1437,6 @@ namespace Playnite
                 // This was mainly reported to happen with some emulators, like RPCS3, no idea why.
                 Thread.Sleep(1000);
                 Application.Restore();
-            }
-
-            if (AppSettings.DiscordPresenceEnabled)
-            {
-                Application.Discord?.ClearPresence();
             }
 
             //Reset the system HDR state back to its original state if there are no active games requiring HDR

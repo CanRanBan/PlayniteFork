@@ -128,9 +128,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DiscordRPC">
-      <HintPath>..\..\Include\Libraries\DiscordRPC.dll</HintPath>
-    </Reference>
     <Reference Include="HtmlRenderer">
       <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
     </Reference>
@@ -363,7 +360,6 @@
     <Compile Include="Database\Collections\PlatformsCollection.cs" />
     <Compile Include="DiagnosticPackageInfo.cs" />
     <Compile Include="DialogsFactory.cs" />
-    <Compile Include="DiscordManager.cs" />
     <Compile Include="EasyAntiCheat.cs" />
     <Compile Include="ElementTreeHelper.cs" />
     <Compile Include="Exceptions.cs" />

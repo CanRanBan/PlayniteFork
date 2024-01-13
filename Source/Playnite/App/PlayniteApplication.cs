@@ -67,7 +67,6 @@ namespace Playnite
         public CmdLineOptions CmdLine { get; set; }
         public DpiScale DpiScale { get; set; } = new DpiScale(1, 1);
         public ComputerScreen CurrentScreen { get; set; } = Computer.GetPrimaryScreen();
-        public DiscordManager Discord { get; set; }
         public SynchronizationContext SyncContext { get; private set; }
         public Action<PlayniteUriEventArgs> AppUriHandler { get; set; }
         public static Application CurrentNative { get; private set; }
@@ -1168,16 +1167,6 @@ namespace Playnite
             {
                 // I have no idea why this fails for some people.
                 logger.Error(e, "Failed to stop pipe server.");
-            }
-
-            // Rare crash report of DiscordRPC not being loaded properly and then crashing on this
-            try
-            {
-                Discord?.Dispose();
-            }
-            catch (Exception e)
-            {
-                logger.Error(e, "Failed to dispose Discord RPC.");
             }
 
             updateCheckTimer?.Dispose();

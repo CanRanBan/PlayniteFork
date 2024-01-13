@@ -896,15 +896,6 @@ namespace Playnite.FullscreenApp.ViewModels
             RunStartupScript();
             Extensions.NotifiyOnApplicationStarted();
 
-            try
-            {
-                App.Discord = new DiscordManager(AppSettings.DiscordPresenceEnabled);
-            }
-            catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
-            {
-                Logger.Error(e, "Failed to initialize Discord manager.");
-            }
-
             OnPropertyChanged(nameof(SortedFilterPresets));
             OnPropertyChanged(nameof(SortedFilterFullscreenPresets));
             if (AppSettings.Fullscreen.SelectedFilterPreset != Guid.Empty)

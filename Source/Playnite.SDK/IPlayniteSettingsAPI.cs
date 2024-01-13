@@ -172,11 +172,6 @@ namespace Playnite.SDK
         /// <summary>
         ///
         /// </summary>
-        bool DiscordPresenceEnabled { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
         ///
         AgeRatingOrg AgeRatingOrgPriority { get; }
 

@@ -1574,17 +1574,6 @@ namespace Playnite
             }
         }
 
-        private bool discordPresenceEnabled = false;
-        public bool DiscordPresenceEnabled
-        {
-            get => discordPresenceEnabled;
-            set
-            {
-                discordPresenceEnabled = value;
-                OnPropertyChanged();
-            }
-        }
-
         private bool showHiddenInQuickLaunch = true;
         public bool ShowHiddenInQuickLaunch
         {
