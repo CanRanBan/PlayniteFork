@@ -563,11 +563,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>SDL2_mixer.dll</TargetPath>
     </Content>
-    <ContentWithTargetPath Include="..\..\Include\Libraries\sqlite3.x86.dll">
+    <Content Include="..\..\Include\Libraries\sqlite3.x86.dll">
       <Link>Include\Libraries\sqlite3.x86.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>sqlite3.x86.dll</TargetPath>
-    </ContentWithTargetPath>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Safe Mode.bat">
