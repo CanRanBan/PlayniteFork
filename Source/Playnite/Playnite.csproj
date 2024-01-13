@@ -554,7 +554,7 @@
   </ItemGroup>
   <ItemGroup>
     <ContentWithTargetPath Include="..\..\Include\Libraries\sqlite3.x86.dll">
-      <Link>Dependencies\sqlite3.x86.dll</Link>
+      <Link>Include\Libraries\sqlite3.x86.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>sqlite3.x86.dll</TargetPath>
     </ContentWithTargetPath>
