@@ -139,9 +139,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="SQLNado">
-      <HintPath>..\..\Include\Libraries\SQLNado.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
@@ -640,6 +637,9 @@
     </PackageReference>
     <PackageReference Include="SharpCompress">
       <Version>0.35.0</Version>
+    </PackageReference>
+    <PackageReference Include="SqlNado">
+      <Version>2.0.2</Version>
     </PackageReference>
     <PackageReference Include="System.IO.Abstractions">
       <Version>20.0.4</Version>
