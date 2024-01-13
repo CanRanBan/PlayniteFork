@@ -553,16 +553,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ContentWithTargetPath Include="..\..\Include\Libraries\SDL2.dll">
-      <Link>Dependencies\SDL2.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>SDL2.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\Include\Libraries\SDL2_mixer.dll">
-      <Link>Dependencies\SDL2_mixer.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>SDL2_mixer.dll</TargetPath>
-    </ContentWithTargetPath>
     <ContentWithTargetPath Include="..\..\Include\Libraries\sqlite3.x86.dll">
       <Link>Dependencies\sqlite3.x86.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
