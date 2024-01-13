@@ -136,13 +136,11 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlRenderer, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
+    <Reference Include="HtmlRenderer">
+      <HintPath>..\..\Include\Libraries\HtmlRenderer\HtmlRenderer.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlRenderer.WPF, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Include\Libraries\HtmlRenderer.WPF.dll</HintPath>
+    <Reference Include="HtmlRenderer.WPF">
+      <HintPath>..\..\Include\Libraries\HtmlRenderer\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

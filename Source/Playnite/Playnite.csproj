@@ -129,10 +129,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlRenderer">
-      <HintPath>..\..\Include\Libraries\HtmlRenderer.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer\HtmlRenderer.dll</HintPath>
     </Reference>
     <Reference Include="HtmlRenderer.WPF">
-      <HintPath>..\..\Include\Libraries\HtmlRenderer.WPF.dll</HintPath>
+      <HintPath>..\..\Include\Libraries\HtmlRenderer\HtmlRenderer.WPF.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
