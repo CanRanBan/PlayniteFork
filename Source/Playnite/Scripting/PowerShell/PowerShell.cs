@@ -145,7 +145,7 @@ namespace Playnite.Scripting.PowerShell
                 $"`tConnected to Playnite process.`n" +
                 $"`tUse CTRL-V and ENTER to paste commands to initialize basic SDK variables.`n" +
                 $"`tMore information at:`n" +
-                $"`thttps://playnite.link/docs/master/tutorials/extensions/scriptingDebugging.html`n" +
+                $"`thttps://api.playnite.link/docs/tutorials/extensions/scriptingDebugging.html`n" +
                 $"\" -ForegroundColor Green;" +
                 $"Enter-PSHostProcess -Id {Process.GetCurrentProcess().Id};";
             interactiveProcess.EnableRaisingEvents = true;
