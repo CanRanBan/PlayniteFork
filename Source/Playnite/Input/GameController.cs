@@ -235,12 +235,11 @@ namespace Playnite.Input
                 {  ControllerInput.Y, ControllerInputState.Released }
             };
 
-            public LoadedGameController(IntPtr controller, IntPtr joystic, int instanceId, string path, string name)
+            public LoadedGameController(IntPtr controller, IntPtr joystic, int instanceId, string name)
             {
                 Controller = controller;
                 Joystic = joystic;
                 InstanceId = instanceId;
-                Path = path;
                 Name = name;
             }
         }
@@ -283,7 +282,7 @@ namespace Playnite.Input
         {
             var controller = SDL_GameControllerOpen(joyIndex);
             var joystick = SDL_GameControllerGetJoystick(controller);
-            var con = new LoadedGameController(controller, joystick, SDL_JoystickInstanceID(joystick), SDL_JoystickPath(joystick), SDL_JoystickName(joystick));
+            var con = new LoadedGameController(controller, joystick, SDL_JoystickInstanceID(joystick), SDL_JoystickName(joystick));
             con.Enabled = !settings.Fullscreen.DisabledGameControllers.Contains(con.Path);
             Controllers.Add(con);
             logger.Info($"added controller index {con.InstanceId}, {con.Name}");
