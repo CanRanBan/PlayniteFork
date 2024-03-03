@@ -1,7 +1,7 @@
 #region License
 /* SDL2# - C# Wrapper for SDL2
  *
- * Copyright (c) 2013-2021 Ethan Lee.
+ * Copyright (c) 2013-2024 Ethan Lee.
  *
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable for any damages arising from
@@ -172,16 +172,6 @@ namespace SDL2
 		);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
-		public static extern int Mix_OpenAudioDevice(
-			int frequency,
-			ushort format,
-			int channels,
-			int chunksize,
-			string device,
-			uint allowed_changes
-		);
-
-		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern int Mix_AllocateChannels(int numchans);
 
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -198,7 +188,7 @@ namespace SDL2
 			IntPtr src,
 			int freesrc
 		);
-
+		
 		/* IntPtr refers to a Mix_Chunk* */
 		/* This is an RWops macro in the C header. */
 		public static IntPtr Mix_LoadWAV(string file)
@@ -664,12 +654,12 @@ namespace SDL2
 		{
 			SDL.SDL_SetError(fmtAndArglist);
 		}
-
+		
 		public static void Mix_ClearError()
 		{
 			SDL.SDL_ClearError();
 		}
-
+		
 		#endregion
 	}
 }

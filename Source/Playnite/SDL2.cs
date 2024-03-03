@@ -1,7 +1,7 @@
 #region License
 /* SDL2# - C# Wrapper for SDL2
  *
- * Copyright (c) 2013-2021 Ethan Lee.
+ * Copyright (c) 2013-2024 Ethan Lee.
  *
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable for any damages arising from
@@ -1913,6 +1913,14 @@ namespace SDL2
 			out int h
 		);
 
+		/* window refers to an SDL_Window* */
+		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
+		public static extern void SDL_GetWindowSizeInPixels(
+			IntPtr window,
+			out int w,
+			out int h
+		);
+
 		/* IntPtr refers to an SDL_Surface*, window to an SDL_Window* */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
 		public static extern IntPtr SDL_GetWindowSurface(IntPtr window);
@@ -2158,6 +2166,7 @@ namespace SDL2
 			IntPtr window,
 			SDL_bool grabbed
 		);
+
 
 		/* window refers to an SDL_Window*, icon to an SDL_Surface* */
 		[DllImport(nativeLibName, CallingConvention = CallingConvention.Cdecl)]
@@ -6674,18 +6683,7 @@ namespace SDL2
 			);
 		}
 
-        [DllImport(nativeLibName, EntryPoint = "SDL_JoystickPath", CallingConvention = CallingConvention.Cdecl)]
-        private static extern IntPtr INTERNAL_SDL_JoystickPath(
-			IntPtr joystick
-		);
-        public static string SDL_JoystickPath(IntPtr joystick)
-        {
-            return UTF8_ToManaged(
-                INTERNAL_SDL_JoystickPath(joystick)
-            );
-        }
-
-        [DllImport(nativeLibName, EntryPoint = "SDL_JoystickNameForIndex", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport(nativeLibName, EntryPoint = "SDL_JoystickNameForIndex", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr INTERNAL_SDL_JoystickNameForIndex(
 			int device_index
 		);
