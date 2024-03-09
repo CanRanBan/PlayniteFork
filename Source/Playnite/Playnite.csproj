@@ -633,7 +633,7 @@
       <Version>2.0.2</Version>
     </PackageReference>
     <PackageReference Include="System.IO.Abstractions">
-      <Version>20.0.15</Version>
+      <Version>20.0.28</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack">
       <Version>1.1.2</Version>
