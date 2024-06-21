@@ -280,6 +280,11 @@ namespace Playnite.Input
 
         public void AddController(int joyIndex)
         {
+            if (isDisposed)
+            {
+                return;
+            }
+
             var controller = SDL_GameControllerOpen(joyIndex);
             var joystick = SDL_GameControllerGetJoystick(controller);
             var con = new LoadedGameController(controller, joystick, SDL_JoystickInstanceID(joystick), SDL_JoystickName(joystick));
@@ -291,6 +296,11 @@ namespace Playnite.Input
 
         public void RemoveController(int instanceId)
         {
+            if (isDisposed)
+            {
+                return;
+            }
+
             var controller = Controllers.FirstOrDefault(a => a.InstanceId == instanceId);
             if (controller == null)
             {
