@@ -462,7 +462,6 @@
     <Compile Include="Windows\ProgressWindowFactory.cs" />
     <Compile Include="Windows\UpdateWindowFactory.cs" />
     <Compile Include="Windows\WindowManager.cs" />
-    <Compile Include="Input\GameController.cs" />
     <Compile Include="Windows\WindowFactory.cs" />
     <Compile Include="Windows\WindowPositionHandler.cs" />
   </ItemGroup>
