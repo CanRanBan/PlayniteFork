@@ -174,12 +174,8 @@ namespace Playnite.DesktopApp.Controls
 
             // Extensions
             extensionsItem = AddMenuChild(Items, "LOCExtensions", null);
-
-            // FullScreen
             extensionsEndItem = new Separator();
             Items.Add(extensionsEndItem);
-            AddMenuChild(Items, "LOCMenuOpenFullscreen", mainModel.OpenFullScreenCommand, null, "FullscreenModeIcon");
-            Items.Add(new Separator());
 
             // Links
             var linksItem = AddMenuChild(Items, "LOCMenuLinksTitle", null);
