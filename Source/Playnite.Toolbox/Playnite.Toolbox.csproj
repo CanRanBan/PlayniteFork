@@ -179,9 +179,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Templates\Themes\Changelog\*.*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Templates\Themes\Desktop\Theme.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
