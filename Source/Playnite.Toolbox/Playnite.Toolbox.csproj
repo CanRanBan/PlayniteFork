@@ -153,18 +153,6 @@
       <Link>Templates\Themes\Fonts\icofont.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\Include\Fonts\TitilliumWeb*.*">
-      <Link>Templates\Themes\Fullscreen\Fonts\%(Filename)%(Extension)</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\Include\Fonts\PlayStation4.*">
-      <Link>Templates\Themes\Fullscreen\Fonts\%(Filename)%(Extension)</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\Include\Fonts\XBOXONE.*">
-      <Link>Templates\Themes\Fullscreen\Fonts\%(Filename)%(Extension)</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="App.config" />
     <None Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -186,13 +174,6 @@
   <ItemGroup>
     <None Include="..\Playnite.DesktopApp\App.xaml">
       <Link>Templates\Themes\Desktop\App.xaml</Link>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Playnite.FullscreenApp\App.xaml">
-      <Link>Templates\Themes\Fullscreen\App.xaml</Link>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -224,34 +205,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Playnite.FullscreenApp\GlobalResources.xaml">
-      <Link>Templates\Themes\Fullscreen\GlobalResources.xaml</Link>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Templates\Themes\Fullscreen\Theme.csproj">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Templates\Themes\Fullscreen\Theme.sln">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\Playnite.DesktopApp\ControlGalleryView.xaml">
       <Link>Templates\Themes\Desktop\ControlGalleryView.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Playnite.FullscreenApp\ControlGalleryView.xaml">
-      <Link>Templates\Themes\Fullscreen\ControlGalleryView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
