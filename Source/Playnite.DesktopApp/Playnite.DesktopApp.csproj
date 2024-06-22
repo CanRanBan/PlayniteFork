@@ -1271,9 +1271,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-  </PropertyGroup>
-  <PropertyGroup>
     <LargeAddressAware>true</LargeAddressAware>
   </PropertyGroup>
   <Target Name="PreBuild" AfterTargets="PreBuildEvent" Condition="('$(Playnite_Source_Dir)' == '') OR ('$(Playnite_Source_Dir)' != '$([System.IO.Path]::GetDirectoryName($(ProjectDir.TrimEnd(%27\%27))))')">
