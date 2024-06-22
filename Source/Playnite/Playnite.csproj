@@ -199,8 +199,6 @@
     <Compile Include="MenuItems.cs" />
     <Compile Include="HotKey.cs" />
     <Compile Include="MenuHelpers.cs" />
-    <Compile Include="SDL2.cs" />
-    <Compile Include="SDL2_mixer.cs" />
     <Compile Include="Settings\SearchWindowVisibilitySettings.cs" />
     <Compile Include="SortableNameConverter.cs" />
     <Compile Include="Common\FileSystem_Checksum.cs" />
