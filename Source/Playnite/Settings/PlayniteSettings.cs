@@ -2466,7 +2466,6 @@ namespace Playnite
             }
 
             settings.WindowPositions = LoadExternalConfig<WindowPositions>(PlaynitePaths.WindowPositionsPath, PlaynitePaths.BackupWindowPositionsPath);
-            settings.Fullscreen = LoadExternalConfig<FullscreenSettings>(PlaynitePaths.FullscreenConfigFilePath, PlaynitePaths.BackupFullscreenConfigFilePath);
             settings.BackupSettings();
             return settings;
         }
@@ -2499,7 +2498,6 @@ namespace Playnite
                 FileSystem.CreateDirectory(PlaynitePaths.ConfigRootPath);
                 SaveSettingFile(this, PlaynitePaths.ConfigFilePath);
                 SaveSettingFile(WindowPositions, PlaynitePaths.WindowPositionsPath);
-                SaveSettingFile(Fullscreen, PlaynitePaths.FullscreenConfigFilePath);
             }
             catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
             {
@@ -2514,7 +2512,6 @@ namespace Playnite
                 FileSystem.CreateDirectory(PlaynitePaths.ConfigRootPath);
                 SaveSettingFile(this, PlaynitePaths.BackupConfigFilePath);
                 SaveSettingFile(WindowPositions, PlaynitePaths.BackupWindowPositionsPath);
-                SaveSettingFile(Fullscreen, PlaynitePaths.BackupFullscreenConfigFilePath);
             }
             catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
             {
