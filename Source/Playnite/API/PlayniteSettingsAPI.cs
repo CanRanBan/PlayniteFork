@@ -50,7 +50,6 @@ namespace Playnite.API
         public AgeRatingOrg AgeRatingOrgPriority => settings.AgeRatingOrgPriority;
         public bool SidebarVisible => settings.ShowSidebar;
         public Dock SidebarPosition => settings.SidebarPosition;
-        public IFullscreenSettingsAPI Fullscreen { get; }
         public ICompletionStatusSettignsApi CompletionStatus { get; }
         public bool ForcePlayTimeSync => false;
         public PlaytimeImportMode PlaytimeImportMode => settings.PlaytimeImportMode;
