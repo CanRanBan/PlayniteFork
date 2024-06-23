@@ -177,7 +177,6 @@
     <Compile Include="API\PlayniteInfoAPI.cs" />
     <Compile Include="API\PlaynitePathsAPI.cs" />
     <Compile Include="Archive.cs" />
-    <Compile Include="Audio.cs" />
     <Compile Include="Backup.cs" />
     <Compile Include="Behaviors\ScrollViewerBehaviours.cs" />
     <Compile Include="Behaviors\SelectorBehaviors.cs" />
