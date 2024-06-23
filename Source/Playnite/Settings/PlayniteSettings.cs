@@ -2230,12 +2230,6 @@ namespace Playnite
             get; private set;
         } = new WindowPositions();
 
-        [JsonIgnore]
-        public FullscreenSettings Fullscreen
-        {
-            get; private set;
-        } = new FullscreenSettings();
-
         private List<SelectableItem<string>> develExtenions = new List<SelectableItem<string>>();
         public List<SelectableItem<string>> DevelExtenions
         {
