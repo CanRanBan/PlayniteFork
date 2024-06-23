@@ -101,11 +101,6 @@ namespace Playnite.SDK
         /// <summary>
         ///
         /// </summary>
-        bool StartInFullscreen { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
         string DatabasePath { get; }
 
         /// <summary>
@@ -137,11 +132,6 @@ namespace Playnite.SDK
         ///
         /// </summary>
         string DesktopTheme { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        string FullscreenTheme { get; }
 
         /// <summary>
         ///
