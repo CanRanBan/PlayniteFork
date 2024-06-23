@@ -1363,32 +1363,13 @@ namespace Playnite
             ExecuteScriptAction(scriptRuntimes[game.Id], game.GameStartedScript, game, true, false, GameScriptType.Started, scriptVars);
             ExecuteScriptAction(scriptRuntimes[game.Id], AppSettings.GameStartedScript, game, game.UseGlobalGameStartedScript, true, GameScriptType.Started, scriptVars);
 
-            if (Application.Mode == ApplicationMode.Desktop)
+            if (AppSettings.AfterLaunch == AfterLaunchOptions.Close)
             {
-                if (AppSettings.AfterLaunch == AfterLaunchOptions.Close)
-                {
-                    Application.Quit();
-                }
-                else if (AppSettings.AfterLaunch == AfterLaunchOptions.Minimize)
-                {
-                    Application.Minimize();
-                }
+                Application.Quit();
             }
-            else
+            else if (AppSettings.AfterLaunch == AfterLaunchOptions.Minimize)
             {
-                if (AppSettings.AfterLaunch == AfterLaunchOptions.Close)
-                {
-                    Application.Quit();
-                    return;
-                }
-
-                AppSettings.Fullscreen.IsMusicMuted = true;
-                if (AppSettings.Fullscreen.MinimizeAfterGameStartup)
-                {
-                    Application.Minimize();
-                }
-
-                PlayniteApplication.Current.IsActive = false;
+                Application.Minimize();
             }
         }
 
