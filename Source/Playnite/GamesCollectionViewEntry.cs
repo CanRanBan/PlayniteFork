@@ -223,51 +223,22 @@ namespace Playnite
         {
             logger.Debug("Reloading collection item view properties.");
             // Use optimized rendering only for Desktop mode where we know pixel perfect data
-            if (app.Mode == ApplicationMode.Desktop)
-            {
-                DetailsListIconProperties = new BitmapLoadProperties(
-                    0,
-                    Convert.ToInt32(settings.DetailsViewListIconSize),
-                    app.DpiScale);
-                GridViewCoverProperties = new BitmapLoadProperties(
-                    Convert.ToInt32(settings.GridItemWidth),
-                    0,
-                    app.DpiScale,
-                    settings.ImageScalerMode);
-            }
-            else
-            {
-                FullscreenListCoverProperties = GetFullscreenItemRenderSettings(app, settings);
-            }
+
+            DetailsListIconProperties = new BitmapLoadProperties(
+                0,
+                Convert.ToInt32(settings.DetailsViewListIconSize),
+                app.DpiScale);
+            GridViewCoverProperties = new BitmapLoadProperties(
+                Convert.ToInt32(settings.GridItemWidth),
+                0,
+                app.DpiScale,
+                settings.ImageScalerMode);
 
             BackgroundImageProperties = new BitmapLoadProperties(
                 app.CurrentScreen.WorkingArea.Width,
                 0,
                 app.DpiScale,
                 settings.ImageScalerMode);
-        }
-
-        private static BitmapLoadProperties GetFullscreenItemRenderSettings(PlayniteApplication app, PlayniteSettings settings)
-        {
-            if (app == null)
-            {
-                return null;
-            }
-
-            var dpi = app.DpiScale;
-            var properties = new BitmapLoadProperties(0, 0, null, settings.Fullscreen.ImageScalerMode);
-            if (settings.Fullscreen.HorizontalLayout)
-            {
-                properties.MaxDecodePixelWidth = app.CurrentScreen.Bounds.Width / (settings.Fullscreen.Columns == 0 ? 1 : settings.Fullscreen.Columns);
-                properties.MaxDecodePixelWidth = (int)Math.Round(properties.MaxDecodePixelWidth / dpi.DpiScaleX);
-            }
-            else
-            {
-                properties.MaxDecodePixelHeight = app.CurrentScreen.Bounds.Height / (settings.Fullscreen.Rows == 0 ? 1 : settings.Fullscreen.Rows);
-                properties.MaxDecodePixelHeight = (int)Math.Round(properties.MaxDecodePixelHeight / dpi.DpiScaleY);
-            }
-
-            return properties;
         }
 
         public static GamesCollectionViewEntry GetAdvancedGroupedEntry(
