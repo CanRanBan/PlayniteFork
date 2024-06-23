@@ -321,8 +321,8 @@ namespace Playnite.ViewModels
             }
 
             IgnoreFilterChanges = true;
-            var filter = App.Mode == ApplicationMode.Desktop ? AppSettings.FilterSettings : AppSettings.Fullscreen.FilterSettings;
-            var view = App.Mode == ApplicationMode.Desktop ? AppSettings.ViewSettings : (ViewSettingsBase)AppSettings.Fullscreen.ViewSettings;
+            var filter = AppSettings.FilterSettings;
+            var view = AppSettings.ViewSettings;
             filter.ApplyFilter(preset.Settings);
             if (preset.SortingOrder != null)
             {
