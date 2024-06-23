@@ -10,22 +10,6 @@ using System.Windows.Controls;
 
 namespace Playnite.API
 {
-    public class FullscreenSettingsAPI : IFullscreenSettingsAPI
-    {
-        private readonly FullscreenSettings settings;
-
-        public bool IsMusicMuted
-        {
-            get => settings.IsMusicMuted;
-            set => settings.IsMusicMuted = value;
-        }
-
-        public FullscreenSettingsAPI(FullscreenSettings settings)
-        {
-            this.settings = settings;
-        }
-    }
-
     public class CompletionStatusSettignsApi : ICompletionStatusSettignsApi
     {
         private readonly GameDatabase db;
