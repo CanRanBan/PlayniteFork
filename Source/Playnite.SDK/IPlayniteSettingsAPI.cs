@@ -186,11 +186,6 @@ namespace Playnite.SDK
         Dock SidebarPosition { get; }
 
         /// <summary>
-        /// Gets Fullscreen mode related settings.
-        /// </summary>
-        IFullscreenSettingsAPI Fullscreen { get; }
-
-        /// <summary>
         /// Gets completion status related settings.
         /// </summary>
         ICompletionStatusSettignsApi CompletionStatus { get; }
