@@ -44,7 +44,6 @@ namespace Playnite.API
         public string Language => settings.Language == "english" ? "en_US" : settings.Language;
         public bool UpdateLibStartup => settings.CheckForLibraryUpdates == LibraryUpdateCheckFrequency.OnEveryStartup;
         public string DesktopTheme => settings.Theme;
-        public string FullscreenTheme => settings.Fullscreen.Theme;
         public bool StartMinimized => settings.StartMinimized;
         public bool StartOnBoot => settings.StartOnBoot;
         public string FontFamilyName => settings.FontFamilyName;
