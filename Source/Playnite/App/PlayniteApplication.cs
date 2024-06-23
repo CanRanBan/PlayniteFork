@@ -344,85 +344,66 @@ namespace Playnite
                     }
                 }
 
-                if (mode == ApplicationMode.Desktop)
+                try
                 {
-                    try
+                    if (System.Drawing.FontFamily.Families.Any(a => a.Name == AppSettings.FontFamilyName))
                     {
-                        if (System.Drawing.FontFamily.Families.Any(a => a.Name == AppSettings.FontFamilyName))
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontFamily", new FontFamily(AppSettings.FontFamilyName));
-                        }
-                        else
-                        {
-                            logger.Error($"Cannot set font {AppSettings.FontFamilyName}, font not found.");
-                        }
-
-                        if (System.Drawing.FontFamily.Families.Any(a => a.Name == AppSettings.MonospaceFontFamilyName))
-                        {
-                            CurrentNative.Resources.Add(
-                                "MonospaceFontFamily", new FontFamily(AppSettings.MonospaceFontFamilyName));
-                        }
-                        else
-                        {
-                            logger.Error($"Cannot set monospace font {AppSettings.MonospaceFontFamilyName}, font not found.");
-                        }
-
-                        if (AppSettings.FontSize > 0)
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontSize", AppSettings.FontSize);
-                        }
-
-                        if (AppSettings.FontSizeSmall > 0)
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontSizeSmall", AppSettings.FontSizeSmall);
-                        }
-
-                        if (AppSettings.FontSizeLarge > 0)
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontSizeLarge", AppSettings.FontSizeLarge);
-                        }
-
-                        if (AppSettings.FontSizeLarger > 0)
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontSizeLarger", AppSettings.FontSizeLarger);
-                        }
-
-                        if (AppSettings.FontSizeLargest > 0)
-                        {
-                            CurrentNative.Resources.Add(
-                                "FontSizeLargest", AppSettings.FontSizeLargest);
-                        }
+                        CurrentNative.Resources.Add(
+                            "FontFamily", new FontFamily(AppSettings.FontFamilyName));
                     }
-                    catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
+                    else
                     {
-                        logger.Error(e, $"Failed to set font {AppSettings.FontFamilyName}");
+                        logger.Error($"Cannot set font {AppSettings.FontFamilyName}, font not found.");
+                    }
+
+                    if (System.Drawing.FontFamily.Families.Any(a => a.Name == AppSettings.MonospaceFontFamilyName))
+                    {
+                        CurrentNative.Resources.Add(
+                            "MonospaceFontFamily", new FontFamily(AppSettings.MonospaceFontFamilyName));
+                    }
+                    else
+                    {
+                        logger.Error($"Cannot set monospace font {AppSettings.MonospaceFontFamilyName}, font not found.");
+                    }
+
+                    if (AppSettings.FontSize > 0)
+                    {
+                        CurrentNative.Resources.Add(
+                            "FontSize", AppSettings.FontSize);
+                    }
+
+                    if (AppSettings.FontSizeSmall > 0)
+                    {
+                        CurrentNative.Resources.Add(
+                            "FontSizeSmall", AppSettings.FontSizeSmall);
+                    }
+
+                    if (AppSettings.FontSizeLarge > 0)
+                    {
+                        CurrentNative.Resources.Add(
+                            "FontSizeLarge", AppSettings.FontSizeLarge);
+                    }
+
+                    if (AppSettings.FontSizeLarger > 0)
+                    {
+                        CurrentNative.Resources.Add(
+                            "FontSizeLarger", AppSettings.FontSizeLarger);
+                    }
+
+                    if (AppSettings.FontSizeLargest > 0)
+                    {
+                        CurrentNative.Resources.Add(
+                            "FontSizeLargest", AppSettings.FontSizeLargest);
                     }
                 }
-                else
+                catch (Exception e) when (!PlayniteEnvironment.ThrowAllErrors)
                 {
-                    if (AppSettings.Fullscreen.FontSize > 0)
-                    {
-                        CurrentNative.Resources.Add(
-                            "FontSize", AppSettings.Fullscreen.FontSize);
-                    }
-
-                    if (AppSettings.Fullscreen.FontSizeSmall > 0)
-                    {
-                        CurrentNative.Resources.Add(
-                            "FontSizeSmall", AppSettings.Fullscreen.FontSizeSmall);
-                    }
+                    logger.Error(e, $"Failed to set font {AppSettings.FontFamilyName}");
                 }
 
                 // Only use this for Desktop mode. Non-default options look terrible in Fullscreen because of viewport scaling.
-                if (mode == ApplicationMode.Desktop)
-                {
-                    Controls.WindowBase.SetTextRenderingOptions(AppSettings.TextFormattingMode, AppSettings.TextRenderingMode);
-                }
+
+                Controls.WindowBase.SetTextRenderingOptions(AppSettings.TextFormattingMode, AppSettings.TextRenderingMode);
 
                 Notifications = new NotificationsAPI();
                 UriHandler = new PlayniteUriHandler();
