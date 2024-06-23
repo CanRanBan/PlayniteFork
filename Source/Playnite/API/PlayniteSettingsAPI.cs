@@ -60,7 +60,6 @@ namespace Playnite.API
         {
             this.settings = settings;
             this.db = db;
-            Fullscreen = new FullscreenSettingsAPI(settings.Fullscreen);
             CompletionStatus = new CompletionStatusSettignsApi(db);
         }
 
