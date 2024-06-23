@@ -293,21 +293,15 @@ namespace Playnite
                 }
                 else
                 {
-                    var theme = mode == ApplicationMode.Desktop ? AppSettings.Theme : AppSettings.Fullscreen.Theme;
+                    var theme = AppSettings.Theme;
                     if (theme != ThemeManager.DefaultTheme.Id)
                     {
                         customTheme = ThemeManager.GetAvailableThemes(mode).Where(a => a.Id == theme).OrderByDescending(a => a.Version).FirstOrDefault();
                         if (customTheme == null)
                         {
                             logger.Error($"Failed to apply theme {theme}, theme not found.");
-                            if (mode == ApplicationMode.Desktop)
-                            {
-                                AppSettings.Theme = ThemeManager.DefaultDesktopThemeId;
-                            }
-                            else
-                            {
-                                AppSettings.Fullscreen.Theme = ThemeManager.DefaultFullscreenThemeId;
-                            }
+
+                            AppSettings.Theme = ThemeManager.DefaultDesktopThemeId;
 
                             ThemeManager.SetCurrentTheme(defaultTheme);
                         }
