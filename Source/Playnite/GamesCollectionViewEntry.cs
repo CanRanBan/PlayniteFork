@@ -121,12 +121,6 @@ namespace Playnite
         public object DefaultDetailsListIconObjectCached => GetDefaultIcon(true, DetailsListIconProperties);
         public object DefaultGridViewCoverObjectCached => GetDefaultCoverImage(true, GridViewCoverProperties);
 
-        public object FullscreenListItemCoverObject => GetImageObject(
-            Game.CoverImage,
-            settings.Fullscreen.ImageScalerMode != ImageLoadScaling.None,
-            FullscreenListCoverProperties);
-        public object DefaultFullscreenListItemCoverObject => GetDefaultCoverImage(true, FullscreenListCoverProperties);
-
         public Series Serie
         {
             get; private set;
