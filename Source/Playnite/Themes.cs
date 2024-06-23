@@ -50,45 +50,6 @@ namespace Playnite
             DefaultTheme = theme;
         }
 
-        public static void ApplyFullscreenButtonPrompts(Application app, FullscreenButtonPrompts prompts)
-        {
-            if (prompts == FullscreenSettings.DefaultButtonPrompts)
-            {
-                var defaultXaml = $"{FullscreenSettings.DefaultButtonPrompts.ToString()}.xaml";
-                foreach (var dir in PlayniteApplication.CurrentNative.Resources.MergedDictionaries.ToList())
-                {
-                    if (dir.Source == null)
-                    {
-                        continue;
-                    }
-
-                    if (dir.Source.OriginalString.Contains("ButtonPrompts") &&
-                        !dir.Source.OriginalString.EndsWith(defaultXaml))
-                    {
-                        PlayniteApplication.CurrentNative.Resources.MergedDictionaries.Remove(dir);
-                    }
-                }
-            }
-            else
-            {
-                var promptsPath = Path.Combine(ThemeManager.DefaultTheme.DirectoryPath, "Images", "ButtonPrompts");
-                foreach (var dir in Directory.GetDirectories(promptsPath))
-                {
-                    var dirInfo = new DirectoryInfo(dir);
-                    var promptXaml = Path.Combine(dir, $"{dirInfo.Name}.xaml");
-                    if (File.Exists(promptXaml) && dirInfo.Name == prompts.ToString())
-                    {
-                        var xaml = Xaml.FromFile(promptXaml);
-                        if (xaml is ResourceDictionary xamlDir)
-                        {
-                            xamlDir.Source = new Uri(promptXaml, UriKind.Absolute);
-                            PlayniteApplication.CurrentNative.Resources.MergedDictionaries.Add(xamlDir);
-                        }
-                    }
-                }
-            }
-        }
-
         public static AddonLoadError ApplyTheme(Application app, ThemeManifest theme, ApplicationMode mode)
         {
             if (theme.Id.IsNullOrEmpty())
