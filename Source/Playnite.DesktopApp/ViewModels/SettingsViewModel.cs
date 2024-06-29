@@ -634,7 +634,6 @@ namespace Playnite.DesktopApp.ViewModels
                 nameof(PlayniteSettings.InstallInstanceId),
                 nameof(PlayniteSettings.GridItemHeight),
                 nameof(PlayniteSettings.WindowPositions),
-                nameof(PlayniteSettings.Fullscreen)
             }, true);
 
             database.ImportExclusions.Remove(removedExclusionItems);
