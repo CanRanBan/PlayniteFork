@@ -95,9 +95,7 @@ namespace Playnite.Common
                 Layout = @"${level:uppercase=true}|${logger}:${message}${exception}"
             };
 
-            config.AddTarget("console", consoleTarget);
-            var rule1 = new LoggingRule("*", NLog.LogLevel.Trace, consoleTarget);
-            config.LoggingRules.Add(rule1);
+            config.AddRuleForAllLevels(consoleTarget);
 #endif
 
             var loggerDir = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
@@ -113,9 +111,7 @@ namespace Playnite.Common
                 Encoding = Encoding.UTF8
             };
 
-            config.AddTarget("file", fileTarget);
-            var rule2 = new LoggingRule("*", NLog.LogLevel.Trace, fileTarget);
-            config.LoggingRules.Add(rule2);
+            config.AddRuleForAllLevels(fileTarget);
             NLog.LogManager.Configuration = config;
         }
 

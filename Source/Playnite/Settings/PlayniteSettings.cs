@@ -2529,10 +2529,7 @@ namespace Playnite
                 Layout = @"${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception}}"
             };
 
-            config.AddTarget("console", consoleTarget);
-
-            var rule1 = new LoggingRule("*", LogLevel.Trace, consoleTarget);
-            config.LoggingRules.Add(rule1);
+            config.AddRuleForAllLevels(consoleTarget);
 #endif
             var coreFileTarget = new FileTarget()
             {
@@ -2558,15 +2555,8 @@ namespace Playnite
                 Encoding = Encoding.UTF8
             };
 
-            var allRule = new LoggingRule("*", LogLevel.Trace, coreFileTarget);
-            allRule.Filters.Add(new NLog.Filters.ConditionBasedFilter()
-            {
-                Condition = "contains('${logger}', '#')",
-                Action = NLog.Filters.FilterResult.Ignore
-            });
-
-            config.LoggingRules.Add(allRule);
-            config.LoggingRules.Add(new LoggingRule("*#*", LogLevel.Trace, extensionFileTarget));
+            config.AddRuleForAllLevels(extensionFileTarget, "*#*", true);
+            config.AddRuleForAllLevels(coreFileTarget);
 
             NLog.LogManager.Configuration = config;
             SDK.LogManager.Init(new NLogLogProvider());
