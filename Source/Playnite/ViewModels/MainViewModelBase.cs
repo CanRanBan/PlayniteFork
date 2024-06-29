@@ -275,14 +275,7 @@ namespace Playnite.ViewModels
                 }
 
                 activeFilterPreset = value;
-                if (App.Mode == ApplicationMode.Desktop)
-                {
-                    AppSettings.SelectedFilterPreset = value?.Id ?? Guid.Empty;
-                }
-                else
-                {
-                    AppSettings.Fullscreen.SelectedFilterPreset = value?.Id ?? Guid.Empty;
-                }
+                AppSettings.SelectedFilterPreset = value?.Id ?? Guid.Empty;
 
                 ApplyFilterPreset(value);
                 OnPropertyChanged();
