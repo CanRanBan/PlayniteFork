@@ -412,7 +412,7 @@ namespace Playnite.ViewModels
                     }
                 }
 
-                var filter = App.Mode == ApplicationMode.Desktop ? AppSettings.FilterSettings : AppSettings.Fullscreen.FilterSettings;
+                var filter = AppSettings.FilterSettings;
                 var preset = new FilterPreset
                 {
                     Name = res.SelectedString,
@@ -422,13 +422,10 @@ namespace Playnite.ViewModels
 
                 if (options[0].Selected)
                 {
-                    var view = App.Mode == ApplicationMode.Desktop ? AppSettings.ViewSettings : (ViewSettingsBase)AppSettings.Fullscreen.ViewSettings;
+                    var view = AppSettings.ViewSettings;
                     preset.SortingOrder = view.SortingOrder;
                     preset.SortingOrderDirection = view.SortingOrderDirection;
-                    if (App.Mode == ApplicationMode.Desktop)
-                    {
-                        preset.GroupingOrder = AppSettings.ViewSettings.GroupingOrder;
-                    }
+                    preset.GroupingOrder = AppSettings.ViewSettings.GroupingOrder;
                 }
 
                 if (existingPreset != null && overwriteExisting)
