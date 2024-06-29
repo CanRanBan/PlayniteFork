@@ -2523,15 +2523,17 @@ namespace Playnite
         {
             var config = new LoggingConfiguration();
             config.DefaultCultureInfo = new System.Globalization.CultureInfo("en-US");
+
 #if DEBUG
-            var consoleTarget = new ColoredConsoleTarget()
+            var consoleTarget = new ColoredConsoleTarget("ConsoleLog")
             {
                 Layout = @"${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception}}"
             };
 
             config.AddRuleForAllLevels(consoleTarget);
 #endif
-            var coreFileTarget = new FileTarget()
+
+            var coreFileTarget = new FileTarget("PlayniteLog")
             {
                 FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "playnite.log"),
                 Layout = "${date:format=dd-MM HH\\:mm\\:ss.fff}|${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception:format=toString}}",
@@ -2543,7 +2545,7 @@ namespace Playnite
                 Encoding = Encoding.UTF8
             };
 
-            var extensionFileTarget = new FileTarget()
+            var extensionFileTarget = new FileTarget("ExtensionsLog")
             {
                 FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "extensions.log"),
                 Layout = "${date:format=dd-MM HH\\:mm\\:ss.fff}|${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception:format=toString}}",

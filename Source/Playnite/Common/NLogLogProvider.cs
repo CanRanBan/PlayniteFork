@@ -89,8 +89,9 @@ namespace Playnite.Common
 
             var config = new LoggingConfiguration();
             config.DefaultCultureInfo = new System.Globalization.CultureInfo("en-US");
+
 #if DEBUG
-            var consoleTarget = new ColoredConsoleTarget()
+            var consoleTarget = new ColoredConsoleTarget("FallbackConsoleLog")
             {
                 Layout = @"${level:uppercase=true}|${logger}:${message}${exception}"
             };
@@ -99,7 +100,7 @@ namespace Playnite.Common
 #endif
 
             var loggerDir = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
-            var fileTarget = new FileTarget()
+            var fileTarget = new FileTarget("FallbackPlayniteLog")
             {
                 FileName = Path.Combine(loggerDir, "nlog.log"),
                 Layout = "${longdate}|${level:uppercase=true}:${message}${exception:format=toString}",
