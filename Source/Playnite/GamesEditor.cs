@@ -1389,18 +1389,13 @@ namespace Playnite
             gameStartups.TryRemove(game.Id, out _);
 
             var restore = false;
-            if (Application.Mode == ApplicationMode.Desktop && AppSettings.AfterGameClose == AfterGameCloseOptions.Restore)
+            if (AppSettings.AfterGameClose == AfterGameCloseOptions.Restore)
             {
                 restore = true;
             }
-            if (Application.Mode == ApplicationMode.Desktop && AppSettings.AfterGameClose == AfterGameCloseOptions.RestoreOnlyFromUI && runningGame.LauchedFromUI)
+            if (AppSettings.AfterGameClose == AfterGameCloseOptions.RestoreOnlyFromUI && runningGame.LauchedFromUI)
             {
                 restore = true;
-            }
-            else if (Application.Mode == ApplicationMode.Fullscreen)
-            {
-                restore = true;
-                AppSettings.Fullscreen.IsMusicMuted = false;
             }
 
             if (restore)
