@@ -237,6 +237,7 @@ namespace Playnite
                 {
                     FileSystem.DeleteFile(PlaynitePaths.SafeStartupFlagFile);
                     ProcessStarter.StartProcess(relaunchPath, CmdLine.ToString());
+                    NLog.LogManager.Shutdown();
                     CurrentNative.Shutdown(0);
                     return;
                 }
@@ -424,6 +425,7 @@ namespace Playnite
             // https://github.com/JosefNemec/Playnite/issues/866
             AppSettings?.SaveSettings();
             ReleaseResources(false);
+            NLog.LogManager.Shutdown();
             CurrentNative.Shutdown(0);
         }
 
@@ -1074,6 +1076,7 @@ namespace Playnite
             }
 
             ReleaseResources();
+            NLog.LogManager.Shutdown();
             CurrentNative.Shutdown(0);
         }
 
@@ -1098,6 +1101,7 @@ namespace Playnite
                 logger.Error(e, "Failed to start process on app shutdown.");
             }
 
+            NLog.LogManager.Shutdown();
             CurrentNative.Shutdown(0);
         }
 
