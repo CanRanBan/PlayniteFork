@@ -102,10 +102,10 @@ namespace Playnite.Common
             var loggerDir = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
             var fileTarget = new FileTarget("FallbackPlayniteLog")
             {
-                FileName = Path.Combine(loggerDir, "nlog.log"),
+                FileName = Path.Combine(loggerDir, "NLog.log"),
                 Layout = "${longdate}|${level:uppercase=true}:${message}${exception:format=toString}",
                 KeepFileOpen = false,
-                ArchiveFileName = Path.Combine(loggerDir, "nlog.{#####}.log"),
+                ArchiveFileName = Path.Combine(loggerDir, "NLog.{#####}.log"),
                 ArchiveAboveSize = 4096000,
                 ArchiveNumbering = ArchiveNumberingMode.Sequence,
                 MaxArchiveFiles = 2,

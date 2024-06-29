@@ -2535,10 +2535,10 @@ namespace Playnite
 
             var coreFileTarget = new FileTarget("PlayniteLog")
             {
-                FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "playnite.log"),
+                FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "Playnite.log"),
                 Layout = "${date:format=dd-MM HH\\:mm\\:ss.fff}|${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception:format=toString}}",
                 KeepFileOpen = false,
-                ArchiveFileName = Path.Combine(PlaynitePaths.ConfigRootPath, "playnite.{#####}.log"),
+                ArchiveFileName = Path.Combine(PlaynitePaths.ConfigRootPath, "Playnite.{#####}.log"),
                 ArchiveAboveSize = 4096000,
                 ArchiveNumbering = ArchiveNumberingMode.Sequence,
                 MaxArchiveFiles = 2,
@@ -2547,10 +2547,10 @@ namespace Playnite
 
             var extensionFileTarget = new FileTarget("ExtensionsLog")
             {
-                FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "extensions.log"),
+                FileName = Path.Combine(PlaynitePaths.ConfigRootPath, "Extensions.log"),
                 Layout = "${date:format=dd-MM HH\\:mm\\:ss.fff}|${level:uppercase=true:padding=-5}|${logger}:${message}${onexception:${newline}${exception:format=toString}}",
                 KeepFileOpen = false,
-                ArchiveFileName = Path.Combine(PlaynitePaths.ConfigRootPath, "extensions.{#####}.log"),
+                ArchiveFileName = Path.Combine(PlaynitePaths.ConfigRootPath, "Extensions.{#####}.log"),
                 ArchiveAboveSize = 4096000,
                 ArchiveNumbering = ArchiveNumberingMode.Sequence,
                 MaxArchiveFiles = 2,
